@@ -1,0 +1,17 @@
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# Secrets - never commit
+*.pem
+*.key
+.env
+admin.conf
+kubeconfig*
+join-command*
+
+# Local tools
+tools/ansible-venv/
