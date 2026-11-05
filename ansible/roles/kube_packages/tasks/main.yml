@@ -1,0 +1,47 @@
+---
+- name: Add the Kubernetes apt signing key for this minor version
+  ansible.builtin.get_url:
+    url: "https://pkgs.k8s.io/core:/stable:/v{{ k8s_minor }}/deb/Release.key"
+    dest: /etc/apt/keyrings/kubernetes-apt-keyring.asc
+    mode: "0644"
+
+- name: Add the Kubernetes apt repository for this minor version
+  ansible.builtin.apt_repository:
+    repo: >-
+      deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.asc]
+      https://pkgs.k8s.io/core:/stable:/v{{ k8s_minor }}/deb/ /
+    filename: kubernetes
+    state: present
+
+- name: Install kubelet, kubeadm and kubectl
+  ansible.builtin.apt:
+    name:
+      - "kubelet={{ k8s_package_version }}"
+      - "kubeadm={{ k8s_package_version }}"
+      - "kubectl={{ k8s_package_version }}"
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Hold the packages so routine upgrades cannot change them
+  ansible.builtin.dpkg_selections:
+    name: "{{ item }}"
+    selection: hold
+  loop:
+    - kubelet
+    - kubeadm
+    - kubectl
+
+- name: Enable kubelet (it starts properly once the node joins a cluster)
+  ansible.builtin.systemd:
+    name: kubelet
+    enabled: true
+
+- name: Report the installed kubeadm version
+  ansible.builtin.command: kubeadm version -o short
+  register: kubeadm_version
+  changed_when: false
+
+- name: Show the installed kubeadm version
+  ansible.builtin.debug:
+    msg: "{{ kubeadm_version.stdout }}"

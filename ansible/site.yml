@@ -5,3 +5,4 @@
   roles:
     - common
     - containerd
+    - kube_packages

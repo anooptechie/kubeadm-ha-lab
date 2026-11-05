@@ -2,7 +2,7 @@
 
 | Component | Version |
 | --- | --- |
-| Kubernetes (build) | 1.36.x |
+| Kubernetes (build) | 1.36.6 |
 | Kubernetes (upgrade target) | 1.37.x |
 | Calico | 3.33.x |
 | containerd | 2.x.x (installed from Docker's apt repo, SystemdCgroup = true) |
