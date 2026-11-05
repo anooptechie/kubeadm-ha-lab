@@ -1,0 +1,6 @@
+---
+- name: Prepare all Kubernetes nodes
+  hosts: k8s
+  become: true
+  roles:
+    - common
