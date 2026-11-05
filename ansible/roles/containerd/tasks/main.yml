@@ -1,0 +1,62 @@
+---
+- name: Create the apt keyrings directory
+  ansible.builtin.file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: "0755"
+
+- name: Add the Docker apt signing key (containerd is published there)
+  ansible.builtin.get_url:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    dest: /etc/apt/keyrings/docker.asc
+    mode: "0644"
+
+- name: Add the Docker apt repository
+  ansible.builtin.apt_repository:
+    repo: >-
+      deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc]
+      https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+    filename: docker
+    state: present
+
+- name: Install containerd
+  ansible.builtin.apt:
+    name: containerd.io
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Generate containerd's default configuration
+  ansible.builtin.command: containerd config default
+  register: containerd_default_config
+  changed_when: false
+
+# The package ships a config that disables the CRI plugin, so we replace it.
+# SystemdCgroup = true makes containerd and kubelet use the same cgroup driver.
+- name: Write the containerd config with SystemdCgroup enabled
+  ansible.builtin.copy:
+    content: "{{ containerd_default_config.stdout | regex_replace('SystemdCgroup = false', 'SystemdCgroup = true') }}\n"
+    dest: /etc/containerd/config.toml
+    mode: "0644"
+  notify: Restart containerd
+
+- name: Enable and start containerd
+  ansible.builtin.systemd:
+    name: containerd
+    enabled: true
+    state: started
+
+- name: Apply any pending containerd restart now
+  ansible.builtin.meta: flush_handlers
+
+- name: Get the installed containerd version
+  ansible.builtin.command: containerd --version
+  register: containerd_version
+  changed_when: false
+
+- name: Check that containerd is 2.x (required by Kubernetes 1.36 and later)
+  ansible.builtin.assert:
+    that:
+      - containerd_version.stdout is regex('v2\.')
+    fail_msg: "containerd 2.x is required. Found: {{ containerd_version.stdout }}"
+    success_msg: "{{ containerd_version.stdout }}"

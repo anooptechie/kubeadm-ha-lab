@@ -5,6 +5,7 @@
 | Kubernetes (build) | 1.36.x |
 | Kubernetes (upgrade target) | 1.37.x |
 | Calico | 3.33.x |
+| containerd | 2.x.x (installed from Docker's apt repo, SystemdCgroup = true) |
 | Node OS | Ubuntu Server 24.04 LTS |
 | Region | us-east-1 |
 
