@@ -6,3 +6,6 @@ k8s_minor: "1.36"
 # Package version. "1.36.*" installs the newest 1.36 patch.
 # Once installed, record the exact version in versions.md.
 k8s_package_version: "1.36.*"
+
+# Calico release installed by the operator
+calico_version: "v3.33.0"

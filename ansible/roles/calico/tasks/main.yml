@@ -1,0 +1,53 @@
+---
+- name: Check whether Calico is already installed
+  ansible.builtin.command: kubectl get installation default
+  environment:
+    KUBECONFIG: /etc/kubernetes/admin.conf
+  register: calico_check
+  failed_when: false
+  changed_when: false
+
+- name: Install Calico
+  when: calico_check.rc != 0
+  environment:
+    KUBECONFIG: /etc/kubernetes/admin.conf
+  block:
+    - name: Install the Calico CRDs (Kubernetes 1.36 or later)
+      ansible.builtin.command: >-
+        kubectl apply --server-side -f
+        https://raw.githubusercontent.com/projectcalico/calico/{{ calico_version }}/manifests/v3_projectcalico_org.yaml
+
+    - name: Install the Tigera operator
+      ansible.builtin.command: >-
+        kubectl apply --server-side -f
+        https://raw.githubusercontent.com/projectcalico/calico/{{ calico_version }}/manifests/tigera-operator.yaml
+
+    - name: Wait for the operator's Installation CRD to be ready
+      ansible.builtin.command: >-
+        kubectl wait --for=condition=Established
+        crd/installations.operator.tigera.io --timeout=120s
+
+    - name: Copy the Calico settings to the node
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/../manifests/calico-installation.yaml"
+        dest: /tmp/calico-installation.yaml
+        mode: "0644"
+
+    - name: Apply the Calico settings
+      ansible.builtin.command: kubectl apply -f /tmp/calico-installation.yaml
+
+- name: Wait for the operator to create its status resources
+  ansible.builtin.command: kubectl get tigerastatus -o name
+  environment:
+    KUBECONFIG: /etc/kubernetes/admin.conf
+  register: tigerastatus_list
+  until: tigerastatus_list.stdout_lines | length > 0
+  retries: 30
+  delay: 10
+  changed_when: false
+
+- name: Wait for all Calico components to report Available
+  ansible.builtin.command: kubectl wait --for=condition=Available tigerastatus --all --timeout=600s
+  environment:
+    KUBECONFIG: /etc/kubernetes/admin.conf
+  changed_when: false

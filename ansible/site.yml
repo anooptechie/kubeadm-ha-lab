@@ -7,8 +7,9 @@
     - containerd
     - kube_packages
 
-- name: Initialise the first control-plane node
+- name: Initialise the first control-plane node and install networking
   hosts: control_plane[0]
   become: true
   roles:
     - control_plane
+    - calico
