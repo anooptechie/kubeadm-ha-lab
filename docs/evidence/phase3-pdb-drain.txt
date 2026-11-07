@@ -1,0 +1,106 @@
+## Scenario 1: drain worker3 with spare capacity
+NAME                   READY   STATUS    RESTARTS   AGE     IP                NODE      NOMINATED NODE   READINESS GATES
+web-5f9dfd4f59-2bn92   1/1     Running   0          3m29s   192.168.235.135   worker1   <none>           <none>
+web-5f9dfd4f59-6cqkd   1/1     Running   0          3m29s   192.168.182.6     worker3   <none>           <none>
+web-5f9dfd4f59-n5zcb   1/1     Running   0          3m29s   192.168.189.70    worker2   <none>           <none>
+web-5f9dfd4f59-p8dzx   1/1     Running   0          3m29s   192.168.182.7     worker3   <none>           <none>
+node/worker3 cordoned
+Warning: ignoring DaemonSet-managed Pods: calico-system/calico-node-n622z, calico-system/csi-node-driver-m7zkd, kube-system/kube-proxy-b6xqw
+evicting pod pdb-demo/web-5f9dfd4f59-p8dzx
+evicting pod calico-system/calico-typha-654b6658-th2vb
+evicting pod calico-system/calico-webhooks-7d655bcb48-fhd6x
+evicting pod calico-system/goldmane-7c87b647d7-s76z4
+evicting pod kube-system/coredns-589f44dc88-sdvvb
+evicting pod pdb-demo/web-5f9dfd4f59-6cqkd
+error when evicting pods/"web-5f9dfd4f59-6cqkd" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+pod/goldmane-7c87b647d7-s76z4 evicted
+pod/calico-webhooks-7d655bcb48-fhd6x evicted
+pod/web-5f9dfd4f59-p8dzx evicted
+pod/calico-typha-654b6658-th2vb evicted
+evicting pod pdb-demo/web-5f9dfd4f59-6cqkd
+pod/coredns-589f44dc88-sdvvb evicted
+pod/web-5f9dfd4f59-6cqkd evicted
+node/worker3 drained
+NAME                   READY   STATUS    RESTARTS   AGE     IP                NODE      NOMINATED NODE   READINESS GATES
+web-5f9dfd4f59-2bn92   1/1     Running   0          3m36s   192.168.235.135   worker1   <none>           <none>
+web-5f9dfd4f59-6xnw6   1/1     Running   0          7s      192.168.235.136   worker1   <none>           <none>
+web-5f9dfd4f59-n5zcb   1/1     Running   0          3m36s   192.168.189.70    worker2   <none>           <none>
+web-5f9dfd4f59-ppbpj   1/1     Running   0          2s      192.168.189.71    worker2   <none>           <none>
+node/worker3 uncordoned
+## Scenario 2: drain worker2 while worker1
+worker3 are cordoned
+node/worker1 cordoned
+node/worker3 cordoned
+node/worker2 cordoned
+Warning: ignoring DaemonSet-managed Pods: calico-system/calico-node-dnwb5, calico-system/csi-node-driver-m5svx, kube-system/kube-proxy-btpfx
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+evicting pod calico-system/whisker-87f99664c-cqv2f
+evicting pod calico-system/calico-kube-controllers-8cd44b645-p766c
+evicting pod calico-system/calico-typha-654b6658-zb2z7
+evicting pod default/nginx-775786f995-mwfb2
+evicting pod pdb-demo/web-5f9dfd4f59-n5zcb
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+pod/calico-kube-controllers-8cd44b645-p766c evicted
+pod/web-5f9dfd4f59-n5zcb evicted
+pod/whisker-87f99664c-cqv2f evicted
+pod/nginx-775786f995-mwfb2 evicted
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+pod/calico-typha-654b6658-zb2z7 evicted
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo" (will retry after 5s): Cannot evict pod as it would violate the pod's disruption budget.
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+There are pending pods in node "worker2" when an error occurred: error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo": global timeout reached: 1m0s
+pod/web-5f9dfd4f59-ppbpj
+error: unable to drain node "worker2" due to error: error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo": global timeout reached: 1m0s, continuing command...
+There are pending nodes to be drained:
+ worker2
+error when evicting pods/"web-5f9dfd4f59-ppbpj" -n "pdb-demo": global timeout reached: 1m0s
+NAME                   READY   STATUS    RESTARTS   AGE     IP                NODE      NOMINATED NODE   READINESS GATES
+web-5f9dfd4f59-2bn92   1/1     Running   0          6m46s   192.168.235.135   worker1   <none>           <none>
+web-5f9dfd4f59-6xnw6   1/1     Running   0          3m17s   192.168.235.136   worker1   <none>           <none>
+web-5f9dfd4f59-ppbpj   1/1     Running   0          3m12s   192.168.189.71    worker2   <none>           <none>
+web-5f9dfd4f59-sndbh   0/1     Pending   0          61s     <none>            <none>    <none>           <none>
+NAME      MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+web-pdb   3               N/A               0                     6m46s
+## Resolution: uncordon the other workers, drain succeeds
+node/worker1 uncordoned
+node/worker3 uncordoned
+node/worker2 already cordoned
+Warning: ignoring DaemonSet-managed Pods: calico-system/calico-node-dnwb5, calico-system/csi-node-driver-m5svx, kube-system/kube-proxy-btpfx
+evicting pod pdb-demo/web-5f9dfd4f59-ppbpj
+pod/web-5f9dfd4f59-ppbpj evicted
+node/worker2 drained
+node/worker2 uncordoned
+NAME      STATUS   ROLES           AGE     VERSION
+cp1       Ready    control-plane   4h17m   v1.36.6
+cp2       Ready    control-plane   81m     v1.36.6
+cp3       Ready    control-plane   81m     v1.36.6
+worker1   Ready    <none>          141m    v1.36.6
+worker2   Ready    <none>          141m    v1.36.6
+worker3   Ready    <none>          81m     v1.36.6
+NAME                   READY   STATUS    RESTARTS   AGE     IP                NODE      NOMINATED NODE   READINESS GATES
+web-5f9dfd4f59-2bn92   1/1     Running   0          8m34s   192.168.235.135   worker1   <none>           <none>
+web-5f9dfd4f59-6xnw6   1/1     Running   0          5m5s    192.168.235.136   worker1   <none>           <none>
+web-5f9dfd4f59-sndbh   1/1     Running   0          2m49s   192.168.235.138   worker1   <none>           <none>
+web-5f9dfd4f59-xcz85   1/1     Running   0          2s      192.168.182.8     worker3   <none>           <none>
+NAME      MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+web-pdb   3               N/A               1                     8m34s
