@@ -1,0 +1,14 @@
+## State at backup time
+NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/keep-me   2/2     2            2           5m4s
+
+NAME                         DATA   AGE
+configmap/important-data     1      5m4s
+configmap/kube-root-ca.crt   1      5m4s
+deployment.apps "keep-me" deleted from restore-demo namespace
+configmap "important-data" deleted from restore-demo namespace
+configmap/created-after-backup created
+## State after the disaster, before the restore
+NAME                             DATA   AGE
+configmap/created-after-backup   1      0s
+configmap/kube-root-ca.crt       1      5m5s
