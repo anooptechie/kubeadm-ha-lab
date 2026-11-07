@@ -1,0 +1,4 @@
+# Copy to terraform.tfvars (which is gitignored) and fill in.
+# The VPC that your workstation runs in. Find it in the console under VPC, or with:
+#   aws ec2 describe-instances --instance-ids <workstation-instance-id> --query 'Reservations[0].Instances[0].VpcId' --output text
+workstation_vpc_id = "vpc-xxxxxxxxxxxxxxxxx"
