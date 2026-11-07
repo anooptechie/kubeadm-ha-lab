@@ -1,0 +1,13 @@
+## Pods
+NAME                     READY   STATUS    RESTARTS   AGE     IP                NODE      NOMINATED NODE   READINESS GATES
+nginx-775786f995-jj6hc   1/1     Running   0          4m48s   192.168.235.131   worker1   <none>           <none>
+nginx-775786f995-mwfb2   1/1     Running   0          4m48s   192.168.189.66    worker2   <none>           <none>
+nginx-775786f995-pwpxh   1/1     Running   0          4m48s   192.168.235.130   worker1   <none>           <none>
+## Nodes
+NAME      STATUS   ROLES           AGE    VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION           CONTAINER-RUNTIME
+cp1       Ready    control-plane   145m   v1.36.6   10.20.11.201   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker1   Ready    <none>          30m    v1.36.6   10.20.11.85    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker2   Ready    <none>          30m    v1.36.6   10.20.12.8     <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+## NodePort
+worker1: 200
+worker2: 200
