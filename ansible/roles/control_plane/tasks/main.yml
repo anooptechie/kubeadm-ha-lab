@@ -1,0 +1,32 @@
+---
+- name: Check whether the cluster is already initialised
+  ansible.builtin.stat:
+    path: /etc/kubernetes/admin.conf
+  register: admin_conf
+
+# control_plane_endpoint comes from the generated inventory (the NLB address).
+# kubeadm adds it to the API server certificate automatically.
+- name: Initialise the first control-plane node
+  ansible.builtin.command: >-
+    kubeadm init
+    --control-plane-endpoint={{ control_plane_endpoint }}:6443
+    --upload-certs
+    --pod-network-cidr=192.168.0.0/16
+  when: not admin_conf.stat.exists
+
+- name: Create the .kube directory for the ubuntu user
+  ansible.builtin.file:
+    path: /home/ubuntu/.kube
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: "0755"
+
+- name: Give the ubuntu user a kubeconfig
+  ansible.builtin.copy:
+    src: /etc/kubernetes/admin.conf
+    dest: /home/ubuntu/.kube/config
+    remote_src: true
+    owner: ubuntu
+    group: ubuntu
+    mode: "0600"
