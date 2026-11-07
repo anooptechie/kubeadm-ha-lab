@@ -11,4 +11,4 @@ k8s_package_version: "1.36.*"
 calico_version: "v3.33.0"
 
 # etcd version running in the cluster (etcdctl and etcdutl must match)
-etcd_version: "3.6.8"
+etcd_version: "3.7.0"
