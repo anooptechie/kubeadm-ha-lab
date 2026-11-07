@@ -1,0 +1,15 @@
+## Nodes
+NAME      STATUS   ROLES           AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION           CONTAINER-RUNTIME
+cp1       Ready    control-plane   3h3m    v1.36.6   10.20.11.201   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp2       Ready    control-plane   7m33s   v1.36.6   10.20.12.77    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp3       Ready    control-plane   7m10s   v1.36.6   10.20.13.73    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker1   Ready    <none>          67m     v1.36.6   10.20.11.85    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker2   Ready    <none>          67m     v1.36.6   10.20.12.8     <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker3   Ready    <none>          7m4s    v1.36.6   10.20.13.40    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+## etcd and apiserver pods
+etcd-cp1                      1/1     Running   0          3h3m    10.20.11.201    cp1       <none>           <none>
+etcd-cp2                      1/1     Running   0          7m26s   10.20.12.77     cp2       <none>           <none>
+etcd-cp3                      1/1     Running   0          7m10s   10.20.13.73     cp3       <none>           <none>
+kube-apiserver-cp1            1/1     Running   0          3h3m    10.20.11.201    cp1       <none>           <none>
+kube-apiserver-cp2            1/1     Running   0          7m26s   10.20.12.77     cp2       <none>           <none>
+kube-apiserver-cp3            1/1     Running   0          7m10s   10.20.13.73     cp3       <none>           <none>

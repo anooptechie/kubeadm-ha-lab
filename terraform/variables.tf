@@ -21,12 +21,12 @@ variable "private_subnet_cidrs" {
 
 variable "control_plane_count" {
   type    = number
-  default = 1
+  default = 3
 }
 
 variable "worker_count" {
   type    = number
-  default = 2
+  default = 3
 }
 
 variable "instance_type" {

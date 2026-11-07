@@ -1,0 +1,29 @@
+---
+- name: Check whether this node has already joined
+  ansible.builtin.stat:
+    path: /etc/kubernetes/kubelet.conf
+  register: kubelet_conf
+
+- name: Join the cluster as an additional control-plane node
+  ansible.builtin.command: >-
+    {{ hostvars[groups['control_plane'][0]].join_command.stdout }}
+    --control-plane
+    --certificate-key {{ hostvars[groups['control_plane'][0]].upload_certs.stdout_lines[-1] }}
+  when: not kubelet_conf.stat.exists
+
+- name: Create the .kube directory for the ubuntu user
+  ansible.builtin.file:
+    path: /home/ubuntu/.kube
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: "0755"
+
+- name: Give the ubuntu user a kubeconfig
+  ansible.builtin.copy:
+    src: /etc/kubernetes/admin.conf
+    dest: /home/ubuntu/.kube/config
+    remote_src: true
+    owner: ubuntu
+    group: ubuntu
+    mode: "0600"
