@@ -1,0 +1,1822 @@
+14:49:12 api=ok w1=200 w2=200 w3=200
+14:49:14 api=ok w1=200 w2=200 w3=200
+14:49:16 api=ok w1=200 w2=200 w3=200
+14:49:18 api=ok w1=200 w2=200 w3=200
+14:49:20 api=ok w1=200 w2=200 w3=200
+14:49:22 api=ok w1=200 w2=200 w3=200
+14:49:24 api=ok w1=200 w2=200 w3=200
+14:49:26 api=ok w1=200 w2=200 w3=200
+14:49:28 api=ok w1=200 w2=200 w3=200
+14:49:30 api=ok w1=200 w2=200 w3=200
+14:49:32 api=ok w1=200 w2=200 w3=200
+14:49:34 api=ok w1=200 w2=200 w3=200
+14:49:36 api=ok w1=200 w2=200 w3=200
+14:49:38 api=ok w1=200 w2=200 w3=200
+14:49:41 api=ok w1=200 w2=200 w3=200
+14:49:43 api=ok w1=200 w2=200 w3=200
+14:49:45 api=ok w1=200 w2=200 w3=200
+14:49:47 api=ok w1=200 w2=200 w3=200
+14:49:49 api=ok w1=200 w2=200 w3=200
+14:49:51 api=ok w1=200 w2=200 w3=200
+14:49:53 api=ok w1=200 w2=200 w3=200
+14:49:55 api=ok w1=200 w2=200 w3=200
+14:49:57 api=ok w1=200 w2=200 w3=200
+14:49:59 api=ok w1=200 w2=200 w3=200
+14:50:01 api=ok w1=200 w2=200 w3=200
+14:50:03 api=ok w1=200 w2=200 w3=200
+14:50:06 api=ok w1=200 w2=200 w3=200
+14:50:08 api=ok w1=200 w2=200 w3=200
+14:50:10 api=ok w1=200 w2=200 w3=200
+14:50:12 api=ok w1=200 w2=200 w3=200
+14:50:14 api=ok w1=200 w2=200 w3=200
+14:50:16 api=ok w1=200 w2=200 w3=200
+14:50:18 api=ok w1=200 w2=200 w3=200
+14:50:20 api=ok w1=200 w2=200 w3=200
+14:50:22 api=ok w1=200 w2=200 w3=200
+14:50:24 api=ok w1=200 w2=200 w3=200
+14:50:26 api=ok w1=200 w2=200 w3=200
+14:50:28 api=ok w1=200 w2=200 w3=200
+14:50:30 api=ok w1=200 w2=200 w3=200
+14:50:32 api=ok w1=200 w2=200 w3=200
+14:50:34 api=ok w1=200 w2=200 w3=200
+14:50:37 api=ok w1=200 w2=200 w3=200
+14:50:39 api=ok w1=200 w2=200 w3=200
+14:50:41 api=ok w1=200 w2=200 w3=200
+14:50:43 api=ok w1=200 w2=200 w3=200
+14:50:45 api=ok w1=200 w2=200 w3=200
+14:50:47 api=ok w1=200 w2=200 w3=200
+14:50:49 api=ok w1=200 w2=200 w3=200
+14:50:51 api=ok w1=200 w2=200 w3=200
+14:50:53 api=ok w1=200 w2=200 w3=200
+14:50:55 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:50:57 api=ok w1=200 w2=200 w3=200
+14:50:59 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:01 api=ok w1=200 w2=200 w3=200
+14:51:03 api=ok w1=200 w2=200 w3=200
+14:51:06 api=ok w1=200 w2=200 w3=200
+14:51:08 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:12 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:16 api=ok w1=200 w2=200 w3=200
+14:51:18 api=ok w1=200 w2=200 w3=200
+14:51:20 api=ok w1=200 w2=200 w3=200
+14:51:22 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:26 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:30 api=ok w1=200 w2=200 w3=200
+14:51:32 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:36 api=ok w1=200 w2=200 w3=200
+14:51:38 api=ok w1=200 w2=200 w3=200
+14:51:40 api=ok w1=200 w2=200 w3=200
+14:51:42 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:44 api=ok w1=200 w2=200 w3=200
+14:51:46 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:51 api=ok w1=200 w2=200 w3=200
+14:51:53 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:51:55 api=ok w1=200 w2=200 w3=200
+14:51:57 api=ok w1=200 w2=200 w3=200
+14:51:59 api=ok w1=200 w2=200 w3=200
+14:52:01 api=ok w1=200 w2=200 w3=200
+14:52:03 api=ok w1=200 w2=200 w3=200
+14:52:05 api=ok w1=200 w2=200 w3=200
+14:52:07 api=ok w1=200 w2=200 w3=200
+14:52:09 api=ok w1=200 w2=200 w3=200
+14:52:11 api=ok w1=200 w2=200 w3=200
+14:52:13 api=ok w1=200 w2=200 w3=200
+14:52:15 api=ok w1=200 w2=200 w3=200
+14:52:17 api=ok w1=200 w2=200 w3=200
+14:52:19 api=ok w1=200 w2=200 w3=200
+14:52:21 api=ok w1=200 w2=200 w3=200
+14:52:24 api=ok w1=200 w2=200 w3=200
+14:52:26 api=ok w1=200 w2=200 w3=200
+14:52:28 api=ok w1=200 w2=200 w3=200
+14:52:30 api=ok w1=200 w2=200 w3=200
+14:52:32 api=ok w1=200 w2=200 w3=200
+14:52:34 api=ok w1=200 w2=200 w3=200
+14:52:36 api=ok w1=200 w2=200 w3=200
+14:52:38 api=ok w1=200 w2=200 w3=200
+14:52:40 api=ok w1=200 w2=200 w3=200
+14:52:42 api=ok w1=200 w2=200 w3=200
+14:52:44 api=ok w1=200 w2=200 w3=200
+14:52:46 api=ok w1=200 w2=200 w3=200
+14:52:48 api=ok w1=200 w2=200 w3=200
+14:52:50 api=ok w1=200 w2=200 w3=200
+14:52:52 api=ok w1=200 w2=200 w3=200
+14:52:54 api=ok w1=200 w2=200 w3=200
+14:52:57 api=ok w1=200 w2=200 w3=200
+14:52:59 api=ok w1=200 w2=200 w3=200
+14:53:01 api=ok w1=200 w2=200 w3=200
+14:53:03 api=ok w1=200 w2=200 w3=200
+14:53:05 api=ok w1=200 w2=200 w3=200
+14:53:07 api=ok w1=200 w2=200 w3=200
+14:53:09 api=ok w1=200 w2=200 w3=200
+14:53:11 api=ok w1=200 w2=200 w3=200
+14:53:13 api=ok w1=200 w2=200 w3=200
+14:53:15 api=ok w1=200 w2=200 w3=200
+14:53:17 api=ok w1=200 w2=200 w3=200
+14:53:19 api=ok w1=200 w2=200 w3=200
+14:53:21 api=ok w1=200 w2=200 w3=200
+14:53:23 api=ok w1=200 w2=200 w3=200
+14:53:25 api=ok w1=200 w2=200 w3=200
+14:53:27 api=ok w1=200 w2=200 w3=200
+14:53:30 api=ok w1=200 w2=200 w3=200
+14:53:32 api=ok w1=200 w2=200 w3=200
+14:53:34 api=ok w1=200 w2=200 w3=200
+14:53:36 api=ok w1=200 w2=200 w3=200
+14:53:38 api=ok w1=200 w2=200 w3=200
+14:53:40 api=ok w1=200 w2=200 w3=200
+14:53:42 api=ok w1=200 w2=200 w3=200
+14:53:44 api=ok w1=200 w2=200 w3=200
+14:53:46 api=ok w1=200 w2=200 w3=200
+14:53:48 api=ok w1=200 w2=200 w3=200
+14:53:50 api=ok w1=200 w2=200 w3=200
+14:53:52 api=ok w1=200 w2=200 w3=200
+14:53:54 api=ok w1=200 w2=200 w3=200
+14:53:56 api=ok w1=200 w2=200 w3=200
+14:53:58 api=ok w1=200 w2=200 w3=200
+14:54:01 api=ok w1=200 w2=200 w3=200
+14:54:03 api=ok w1=200 w2=200 w3=200
+14:54:05 api=ok w1=200 w2=200 w3=200
+14:54:07 api=ok w1=200 w2=200 w3=200
+14:54:09 api=ok w1=200 w2=200 w3=200
+14:54:11 api=ok w1=200 w2=200 w3=200
+14:54:13 api=ok w1=200 w2=200 w3=200
+14:54:15 api=ok w1=200 w2=200 w3=200
+14:54:17 api=ok w1=200 w2=200 w3=200
+14:54:19 api=ok w1=200 w2=200 w3=200
+14:54:21 api=ok w1=200 w2=200 w3=200
+14:54:23 api=ok w1=200 w2=200 w3=200
+14:54:25 api=ok w1=200 w2=200 w3=200
+14:54:27 api=ok w1=200 w2=200 w3=200
+14:54:29 api=ok w1=200 w2=200 w3=200
+14:54:31 api=ok w1=200 w2=200 w3=200
+14:54:33 api=ok w1=200 w2=200 w3=200
+14:54:36 api=ok w1=200 w2=200 w3=200
+14:54:38 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:54:40 api=ok w1=200 w2=200 w3=200
+14:54:42 api=ok w1=200 w2=200 w3=200
+14:54:44 api=ok w1=200 w2=200 w3=200
+14:54:46 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:54:48 api=ok w1=200 w2=200 w3=200
+14:54:50 api=ok w1=200 w2=200 w3=200
+14:54:52 api=ok w1=200 w2=200 w3=200
+14:54:54 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:54:56 api=ok w1=200 w2=200 w3=200
+14:54:58 api=ok w1=200 w2=200 w3=200
+14:55:00 api=ok w1=200 w2=200 w3=200
+14:55:02 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:55:04 api=ok w1=200 w2=200 w3=200
+14:55:07 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:55:09 api=ok w1=200 w2=200 w3=200
+14:55:11 api=ok w1=200 w2=200 w3=200
+14:55:13 api=ok w1=200 w2=200 w3=200
+14:55:15 api=ok w1=200 w2=200 w3=200
+14:55:17 api=ok w1=200 w2=200 w3=200
+14:55:19 api=ok w1=200 w2=200 w3=200
+14:55:21 api=ok w1=200 w2=200 w3=200
+14:55:23 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:55:27 api=ok w1=200 w2=200 w3=200
+14:55:29 api=ok w1=200 w2=200 w3=200
+14:55:31 api=ok w1=200 w2=200 w3=200
+14:55:33 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+14:55:37 api=ok w1=200 w2=200 w3=200
+14:55:39 api=ok w1=200 w2=200 w3=200
+14:55:41 api=ok w1=200 w2=200 w3=200
+14:55:43 api=ok w1=200 w2=200 w3=200
+14:55:46 api=ok w1=200 w2=200 w3=200
+14:55:48 api=ok w1=200 w2=200 w3=200
+14:55:50 api=ok w1=200 w2=200 w3=200
+14:55:52 api=ok w1=200 w2=200 w3=200
+14:55:54 api=ok w1=200 w2=200 w3=200
+14:55:56 api=ok w1=200 w2=200 w3=200
+14:55:58 api=ok w1=200 w2=200 w3=200
+14:56:00 api=ok w1=200 w2=200 w3=200
+14:56:02 api=ok w1=200 w2=200 w3=200
+14:56:05 api=ok w1=200 w2=200 w3=200
+14:56:07 api=ok w1=200 w2=200 w3=200
+14:56:09 api=ok w1=200 w2=200 w3=200
+14:56:11 api=ok w1=200 w2=200 w3=200
+14:56:13 api=ok w1=200 w2=200 w3=200
+14:56:15 api=ok w1=200 w2=200 w3=200
+14:56:18 api=ok w1=200 w2=200 w3=200
+14:56:20 api=ok w1=200 w2=200 w3=200
+14:56:22 api=ok w1=200 w2=200 w3=200
+14:56:24 api=ok w1=200 w2=200 w3=200
+14:56:26 api=ok w1=200 w2=200 w3=200
+14:56:28 api=ok w1=200 w2=200 w3=200
+14:56:30 api=ok w1=200 w2=200 w3=200
+14:56:32 api=ok w1=200 w2=200 w3=200
+14:56:34 api=ok w1=200 w2=200 w3=200
+14:56:36 api=ok w1=200 w2=200 w3=200
+14:56:38 api=ok w1=200 w2=200 w3=200
+14:56:40 api=ok w1=200 w2=200 w3=200
+14:56:42 api=ok w1=200 w2=200 w3=200
+14:56:44 api=ok w1=200 w2=200 w3=200
+14:56:46 api=ok w1=200 w2=200 w3=200
+14:56:48 api=ok w1=200 w2=200 w3=200
+14:56:51 api=ok w1=200 w2=200 w3=200
+14:56:53 api=ok w1=200 w2=200 w3=200
+14:56:55 api=ok w1=200 w2=200 w3=200
+14:56:57 api=ok w1=200 w2=200 w3=200
+14:56:59 api=ok w1=200 w2=200 w3=200
+14:57:01 api=ok w1=200 w2=200 w3=200
+14:57:03 api=ok w1=200 w2=200 w3=200
+14:57:05 api=ok w1=200 w2=200 w3=200
+14:57:07 api=ok w1=200 w2=200 w3=200
+14:57:09 api=ok w1=200 w2=200 w3=200
+14:57:11 api=ok w1=200 w2=200 w3=200
+14:57:13 api=ok w1=200 w2=200 w3=200
+14:57:15 api=ok w1=200 w2=200 w3=200
+14:57:17 api=ok w1=200 w2=200 w3=200
+14:57:19 api=ok w1=200 w2=200 w3=200
+14:57:21 api=ok w1=200 w2=200 w3=200
+14:57:24 api=ok w1=200 w2=200 w3=200
+14:57:26 api=ok w1=200 w2=200 w3=200
+14:57:28 api=ok w1=200 w2=200 w3=200
+14:57:30 api=ok w1=200 w2=200 w3=200
+14:57:32 api=ok w1=200 w2=200 w3=200
+14:57:34 api=ok w1=200 w2=200 w3=200
+14:57:36 api=ok w1=200 w2=200 w3=200
+14:57:38 api=ok w1=200 w2=200 w3=200
+14:57:40 api=ok w1=200 w2=200 w3=200
+14:57:42 api=ok w1=200 w2=200 w3=200
+14:57:44 api=ok w1=200 w2=200 w3=200
+14:57:46 api=ok w1=200 w2=200 w3=200
+14:57:48 api=ok w1=200 w2=200 w3=200
+14:57:50 api=ok w1=200 w2=200 w3=200
+14:57:52 api=ok w1=200 w2=200 w3=200
+14:57:55 api=ok w1=200 w2=200 w3=200
+14:57:57 api=ok w1=200 w2=200 w3=200
+14:57:59 api=ok w1=200 w2=200 w3=200
+14:58:01 api=ok w1=200 w2=200 w3=200
+14:58:03 api=ok w1=200 w2=200 w3=200
+14:58:05 api=ok w1=200 w2=200 w3=200
+14:58:07 api=ok w1=200 w2=200 w3=200
+14:58:09 api=ok w1=200 w2=200 w3=200
+14:58:11 api=ok w1=200 w2=200 w3=200
+14:58:13 api=ok w1=200 w2=200 w3=200
+14:58:15 api=ok w1=200 w2=200 w3=200
+14:58:17 api=ok w1=200 w2=200 w3=200
+14:58:19 api=ok w1=200 w2=200 w3=200
+14:58:21 api=ok w1=200 w2=200 w3=200
+14:58:23 api=ok w1=200 w2=200 w3=200
+14:58:26 api=ok w1=200 w2=200 w3=200
+14:58:28 api=ok w1=200 w2=200 w3=200
+14:58:30 api=ok w1=200 w2=200 w3=200
+14:58:32 api=ok w1=200 w2=200 w3=200
+14:58:34 api=ok w1=200 w2=200 w3=200
+14:58:36 api=ok w1=200 w2=200 w3=200
+14:58:38 api=ok w1=200 w2=200 w3=200
+14:58:40 api=ok w1=200 w2=200 w3=200
+14:58:42 api=ok w1=200 w2=200 w3=200
+14:58:44 api=ok w1=200 w2=200 w3=200
+14:58:46 api=ok w1=200 w2=200 w3=200
+14:58:48 api=ok w1=200 w2=200 w3=200
+14:58:50 api=ok w1=200 w2=200 w3=200
+14:58:52 api=ok w1=200 w2=200 w3=200
+14:58:54 api=ok w1=200 w2=200 w3=200
+14:58:56 api=ok w1=200 w2=200 w3=200
+14:58:58 api=ok w1=200 w2=200 w3=200
+14:59:01 api=ok w1=200 w2=200 w3=200
+14:59:03 api=ok w1=200 w2=200 w3=200
+14:59:05 api=ok w1=200 w2=200 w3=200
+14:59:07 api=ok w1=200 w2=200 w3=200
+14:59:09 api=ok w1=200 w2=200 w3=200
+14:59:11 api=ok w1=200 w2=200 w3=200
+14:59:13 api=ok w1=200 w2=200 w3=200
+14:59:15 api=ok w1=200 w2=200 w3=200
+14:59:17 api=ok w1=200 w2=200 w3=200
+14:59:19 api=ok w1=200 w2=200 w3=200
+14:59:21 api=ok w1=200 w2=200 w3=200
+14:59:23 api=ok w1=200 w2=200 w3=200
+14:59:25 api=ok w1=200 w2=200 w3=200
+14:59:27 api=ok w1=200 w2=200 w3=200
+14:59:29 api=ok w1=200 w2=200 w3=200
+14:59:31 api=ok w1=200 w2=200 w3=200
+14:59:34 api=ok w1=200 w2=200 w3=200
+14:59:36 api=ok w1=200 w2=200 w3=200
+14:59:38 api=ok w1=200 w2=200 w3=200
+14:59:40 api=ok w1=200 w2=200 w3=200
+14:59:42 api=ok w1=200 w2=200 w3=200
+14:59:44 api=ok w1=200 w2=200 w3=200
+14:59:46 api=ok w1=200 w2=200 w3=200
+14:59:48 api=ok w1=200 w2=200 w3=200
+14:59:50 api=ok w1=200 w2=200 w3=200
+14:59:52 api=ok w1=200 w2=200 w3=200
+14:59:54 api=ok w1=200 w2=200 w3=200
+14:59:56 api=ok w1=200 w2=200 w3=200
+14:59:58 api=ok w1=200 w2=200 w3=200
+15:00:00 api=ok w1=200 w2=200 w3=200
+15:00:02 api=ok w1=200 w2=200 w3=200
+15:00:05 api=ok w1=200 w2=200 w3=200
+15:00:07 api=ok w1=200 w2=200 w3=200
+15:00:09 api=ok w1=200 w2=200 w3=200
+15:00:11 api=ok w1=200 w2=200 w3=200
+15:00:13 api=ok w1=200 w2=200 w3=200
+15:00:15 api=ok w1=200 w2=200 w3=200
+15:00:17 api=ok w1=200 w2=200 w3=200
+15:00:19 api=ok w1=200 w2=200 w3=200
+15:00:21 api=ok w1=200 w2=200 w3=200
+15:00:23 api=ok w1=200 w2=200 w3=200
+15:00:25 api=ok w1=200 w2=200 w3=200
+15:00:27 api=ok w1=200 w2=200 w3=200
+15:00:29 api=ok w1=200 w2=200 w3=200
+15:00:31 api=ok w1=200 w2=200 w3=200
+15:00:33 api=ok w1=200 w2=200 w3=200
+15:00:35 api=ok w1=200 w2=200 w3=200
+15:00:38 api=ok w1=200 w2=200 w3=200
+15:00:40 api=ok w1=200 w2=200 w3=200
+15:00:42 api=ok w1=200 w2=200 w3=200
+15:00:44 api=ok w1=200 w2=200 w3=200
+15:00:46 api=ok w1=200 w2=200 w3=200
+15:00:48 api=ok w1=200 w2=200 w3=200
+15:00:50 api=ok w1=200 w2=200 w3=200
+15:00:52 api=ok w1=200 w2=200 w3=200
+15:00:54 api=ok w1=200 w2=200 w3=200
+15:00:56 api=ok w1=200 w2=200 w3=200
+15:00:58 api=ok w1=200 w2=200 w3=200
+15:01:00 api=ok w1=200 w2=200 w3=200
+15:01:02 api=ok w1=200 w2=200 w3=200
+15:01:04 api=ok w1=200 w2=200 w3=200
+15:01:06 api=ok w1=200 w2=200 w3=200
+15:01:08 api=ok w1=200 w2=200 w3=200
+15:01:11 api=ok w1=200 w2=200 w3=200
+15:01:13 api=ok w1=200 w2=200 w3=200
+15:01:15 api=ok w1=200 w2=200 w3=200
+15:01:17 api=ok w1=200 w2=200 w3=200
+15:01:19 api=ok w1=200 w2=200 w3=200
+15:01:21 api=ok w1=200 w2=200 w3=200
+15:01:23 api=ok w1=200 w2=200 w3=200
+15:01:25 api=ok w1=200 w2=200 w3=200
+15:01:27 api=ok w1=200 w2=200 w3=200
+15:01:29 api=ok w1=200 w2=200 w3=200
+15:01:31 api=ok w1=200 w2=200 w3=200
+15:01:33 api=ok w1=200 w2=200 w3=200
+15:01:35 api=ok w1=200 w2=200 w3=200
+15:01:37 api=ok w1=200 w2=200 w3=200
+15:01:39 api=ok w1=200 w2=200 w3=200
+15:01:41 api=ok w1=200 w2=200 w3=200
+15:01:43 api=ok w1=200 w2=200 w3=200
+15:01:46 api=ok w1=200 w2=200 w3=200
+15:01:48 api=ok w1=200 w2=200 w3=200
+15:01:50 api=ok w1=200 w2=200 w3=200
+15:01:52 api=ok w1=200 w2=200 w3=200
+15:01:54 api=ok w1=200 w2=200 w3=200
+15:01:56 api=ok w1=200 w2=200 w3=200
+15:01:58 api=ok w1=200 w2=200 w3=200
+15:02:00 api=ok w1=200 w2=200 w3=200
+15:02:02 api=ok w1=200 w2=200 w3=200
+15:02:04 api=ok w1=200 w2=200 w3=200
+15:02:06 api=ok w1=200 w2=200 w3=200
+15:02:08 api=ok w1=200 w2=200 w3=200
+15:02:10 api=ok w1=200 w2=200 w3=200
+15:02:12 api=ok w1=200 w2=200 w3=200
+15:02:14 api=ok w1=200 w2=200 w3=200
+15:02:16 api=ok w1=200 w2=200 w3=200
+15:02:19 api=ok w1=200 w2=200 w3=200
+15:02:21 api=ok w1=200 w2=200 w3=200
+15:02:23 api=ok w1=200 w2=200 w3=200
+15:02:25 api=ok w1=200 w2=200 w3=200
+15:02:27 api=ok w1=200 w2=200 w3=200
+15:02:29 api=ok w1=200 w2=200 w3=200
+15:02:31 api=ok w1=200 w2=200 w3=200
+15:02:33 api=ok w1=200 w2=200 w3=200
+15:02:35 api=ok w1=200 w2=200 w3=200
+15:02:37 api=ok w1=200 w2=200 w3=200
+15:02:39 api=ok w1=200 w2=200 w3=200
+15:02:41 api=ok w1=200 w2=200 w3=200
+15:02:43 api=ok w1=200 w2=200 w3=200
+15:02:45 api=ok w1=200 w2=200 w3=200
+15:02:47 api=ok w1=200 w2=200 w3=200
+15:02:49 api=ok w1=200 w2=200 w3=200
+15:02:52 api=ok w1=200 w2=200 w3=200
+15:02:54 api=ok w1=200 w2=200 w3=200
+15:02:56 api=ok w1=200 w2=200 w3=200
+15:02:58 api=ok w1=200 w2=200 w3=200
+15:03:00 api=ok w1=200 w2=200 w3=200
+15:03:02 api=ok w1=200 w2=200 w3=200
+15:03:04 api=ok w1=200 w2=200 w3=200
+15:03:06 api=ok w1=200 w2=200 w3=200
+15:03:08 api=ok w1=200 w2=200 w3=200
+15:03:10 api=ok w1=200 w2=200 w3=200
+15:03:12 api=ok w1=200 w2=200 w3=200
+15:03:14 api=ok w1=200 w2=200 w3=200
+15:03:16 api=ok w1=200 w2=200 w3=200
+15:03:18 api=ok w1=200 w2=200 w3=200
+15:03:20 api=ok w1=200 w2=200 w3=200
+15:03:22 api=ok w1=200 w2=200 w3=200
+15:03:24 api=ok w1=200 w2=200 w3=200
+15:03:27 api=ok w1=200 w2=200 w3=200
+15:03:29 api=ok w1=200 w2=200 w3=200
+15:03:31 api=ok w1=200 w2=200 w3=200
+15:03:33 api=ok w1=200 w2=200 w3=200
+15:03:35 api=ok w1=200 w2=200 w3=200
+15:03:37 api=ok w1=200 w2=200 w3=200
+15:03:39 api=ok w1=200 w2=200 w3=200
+15:03:41 api=ok w1=200 w2=200 w3=200
+15:03:43 api=ok w1=200 w2=200 w3=200
+15:03:45 api=ok w1=200 w2=200 w3=200
+15:03:47 api=ok w1=200 w2=200 w3=200
+15:03:49 api=ok w1=200 w2=200 w3=200
+15:03:51 api=ok w1=200 w2=200 w3=200
+15:03:53 api=ok w1=200 w2=200 w3=200
+15:03:55 api=ok w1=200 w2=200 w3=200
+15:03:57 api=ok w1=200 w2=200 w3=200
+15:04:00 api=ok w1=200 w2=200 w3=200
+15:04:02 api=ok w1=200 w2=200 w3=200
+15:04:04 api=ok w1=200 w2=200 w3=200
+15:04:06 api=ok w1=200 w2=200 w3=200
+15:04:08 api=ok w1=200 w2=200 w3=200
+15:04:10 api=ok w1=200 w2=200 w3=200
+15:04:12 api=ok w1=200 w2=200 w3=200
+15:04:14 api=ok w1=200 w2=200 w3=200
+15:04:16 api=ok w1=200 w2=200 w3=200
+15:04:18 api=ok w1=200 w2=200 w3=200
+15:04:20 api=ok w1=200 w2=200 w3=200
+15:04:22 api=ok w1=200 w2=200 w3=200
+15:04:24 api=ok w1=200 w2=200 w3=200
+15:04:26 api=ok w1=200 w2=200 w3=200
+15:04:28 api=ok w1=200 w2=200 w3=200
+15:04:31 api=ok w1=200 w2=200 w3=200
+15:04:33 api=ok w1=200 w2=200 w3=200
+15:04:35 api=ok w1=200 w2=200 w3=200
+15:04:37 api=ok w1=200 w2=200 w3=200
+15:04:39 api=ok w1=200 w2=200 w3=200
+15:04:41 api=ok w1=200 w2=200 w3=200
+15:04:43 api=ok w1=200 w2=200 w3=200
+15:04:45 api=ok w1=200 w2=200 w3=200
+15:04:47 api=ok w1=200 w2=200 w3=200
+15:04:49 api=ok w1=200 w2=200 w3=200
+15:04:51 api=ok w1=200 w2=200 w3=200
+15:04:53 api=ok w1=200 w2=200 w3=200
+15:04:55 api=ok w1=200 w2=200 w3=200
+15:04:57 api=ok w1=200 w2=200 w3=200
+15:04:59 api=ok w1=200 w2=200 w3=200
+15:05:01 api=ok w1=200 w2=200 w3=200
+15:05:04 api=ok w1=200 w2=200 w3=200
+15:05:06 api=ok w1=200 w2=200 w3=200
+15:05:08 api=ok w1=200 w2=200 w3=200
+15:05:10 api=ok w1=200 w2=200 w3=200
+15:05:12 api=ok w1=200 w2=200 w3=200
+15:05:14 api=ok w1=200 w2=200 w3=200
+15:05:16 api=ok w1=200 w2=200 w3=200
+15:05:18 api=ok w1=200 w2=200 w3=200
+15:05:20 api=ok w1=200 w2=200 w3=200
+15:05:22 api=ok w1=200 w2=200 w3=200
+15:05:24 api=ok w1=200 w2=200 w3=200
+15:05:26 api=ok w1=200 w2=200 w3=200
+15:05:28 api=ok w1=200 w2=200 w3=200
+15:05:30 api=ok w1=200 w2=200 w3=200
+15:05:32 api=ok w1=200 w2=200 w3=200
+15:05:35 api=ok w1=200 w2=200 w3=200
+15:05:37 api=ok w1=200 w2=200 w3=200
+15:05:39 api=ok w1=200 w2=200 w3=200
+15:05:41 api=ok w1=200 w2=200 w3=200
+15:05:43 api=ok w1=200 w2=200 w3=200
+15:05:45 api=ok w1=200 w2=200 w3=200
+15:05:47 api=ok w1=200 w2=200 w3=200
+15:05:49 api=ok w1=200 w2=200 w3=200
+15:05:51 api=ok w1=200 w2=200 w3=200
+15:05:53 api=ok w1=200 w2=200 w3=200
+15:05:55 api=ok w1=200 w2=200 w3=200
+15:05:57 api=ok w1=200 w2=200 w3=200
+15:05:59 api=ok w1=200 w2=200 w3=200
+15:06:01 api=ok w1=200 w2=200 w3=200
+15:06:04 api=ok w1=200 w2=200 w3=200
+15:06:06 api=ok w1=200 w2=200 w3=200
+15:06:08 api=ok w1=200 w2=200 w3=200
+15:06:10 api=ok w1=200 w2=200 w3=200
+15:06:12 api=ok w1=200 w2=200 w3=200
+15:06:14 api=ok w1=200 w2=200 w3=200
+15:06:16 api=ok w1=200 w2=200 w3=200
+15:06:18 api=ok w1=200 w2=200 w3=200
+15:06:20 api=ok w1=200 w2=200 w3=200
+15:06:22 api=ok w1=200 w2=200 w3=200
+15:06:24 api=ok w1=200 w2=200 w3=200
+15:06:26 api=ok w1=200 w2=200 w3=200
+15:06:28 api=ok w1=200 w2=200 w3=200
+15:06:30 api=ok w1=200 w2=200 w3=200
+15:06:32 api=ok w1=200 w2=200 w3=200
+15:06:34 api=ok w1=200 w2=200 w3=200
+15:06:37 api=ok w1=200 w2=200 w3=200
+15:06:39 api=ok w1=200 w2=200 w3=200
+15:06:41 api=ok w1=200 w2=200 w3=200
+15:06:43 api=ok w1=200 w2=200 w3=200
+15:06:45 api=ok w1=200 w2=200 w3=200
+15:06:47 api=ok w1=200 w2=200 w3=200
+15:06:49 api=ok w1=200 w2=200 w3=200
+15:06:51 api=ok w1=200 w2=200 w3=200
+15:06:53 api=ok w1=200 w2=200 w3=200
+15:06:55 api=ok w1=200 w2=200 w3=200
+15:06:57 api=ok w1=200 w2=200 w3=200
+15:06:59 api=ok w1=200 w2=200 w3=200
+15:07:01 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+15:07:05 api=ok w1=200 w2=200 w3=200
+15:07:07 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+15:07:12 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+15:07:16 api=ok w1=200 w2=200 w3=200
+15:07:18 api=ok w1=200 w2=200 w3=200
+15:07:20 api=ok w1=200 w2=200 w3=200
+15:07:22 api=ok w1=200 w2=200 w3=200
+15:07:24 api=ok w1=200 w2=200 w3=200
+15:07:26 api=ok w1=200 w2=200 w3=200
+15:07:28 api=ok w1=200 w2=200 w3=200
+15:07:30 api=ok w1=200 w2=200 w3=200
+15:07:32 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+15:07:36 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+15:07:40 api=ok w1=200 w2=200 w3=200
+15:07:42 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+15:07:44 api=ok w1=200 w2=200 w3=200
+15:07:46 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=200
+15:07:50 api=ok w1=200 w2=200 w3=000
+15:07:53 api=ok w1=200 w2=200 w3=000
+15:07:55 api=[+]ping ok
+[+]log ok
+[+]loopback-serving-certificate ok
+[-]etcd failed: reason withheld
+[+]poststarthook/start-apiserver-admission-initializer ok
+[+]poststarthook/generic-apiserver-start-informers ok
+[+]poststarthook/priority-and-fairness-config-consumer ok
+[+]poststarthook/priority-and-fairness-filter ok
+[+]poststarthook/storage-object-count-tracker-hook ok
+[+]poststarthook/start-apiextensions-informers ok
+[+]poststarthook/start-apiextensions-controllers ok
+[+]poststarthook/crd-informer-synced ok
+[+]poststarthook/start-system-namespaces-controller ok
+[+]poststarthook/peer-endpoint-reconciler-controller ok
+[+]poststarthook/start-cluster-authentication-info-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-controller ok
+[+]poststarthook/start-kube-apiserver-identity-lease-garbage-collector ok
+[+]poststarthook/storage-readiness ok
+[+]poststarthook/start-legacy-token-tracking-controller ok
+[+]poststarthook/start-service-ip-repair-controllers ok
+[+]poststarthook/rbac/bootstrap-roles ok
+[+]poststarthook/scheduling/bootstrap-system-priority-classes ok
+[+]poststarthook/priority-and-fairness-config-producer ok
+[+]poststarthook/bootstrap-controller ok
+[+]poststarthook/start-kubernetes-service-cidr-controller ok
+[+]poststarthook/aggregator-reload-proxy-client-cert ok
+[+]poststarthook/start-kube-aggregator-informers ok
+[+]poststarthook/apiservice-status-local-available-controller ok
+[+]poststarthook/apiservice-status-remote-available-controller ok
+[+]poststarthook/apiservice-registration-controller ok
+[+]poststarthook/apiservice-discovery-controller ok
+[+]poststarthook/kube-apiserver-autoregistration ok
+[+]autoregister-completion ok
+[+]poststarthook/apiservice-openapi-controller ok
+[+]poststarthook/apiservice-openapiv3-controller ok
+healthz check failed w1=200 w2=200 w3=000
+15:07:57 api=ok w1=200 w2=200 w3=000
+15:07:59 api=ok w1=200 w2=200 w3=000
+15:08:01 api=ok w1=200 w2=200 w3=000
+15:08:03 api=ok w1=200 w2=200 w3=000
+15:08:05 api=ok w1=200 w2=200 w3=000
+15:08:07 api=ok w1=000 w2=000 w3=000
+15:08:09 api=ok w1=000 w2=000 w3=000
+15:08:11 api=ok w1=000 w2=000 w3=000
+15:08:13 api=ok w1=000 w2=000 w3=000
+15:08:15 api=ok w1=000 w2=000 w3=000
+15:08:17 api=ok w1=000 w2=000 w3=000
+15:08:19 api=ok w1=200 w2=200 w3=200
+15:08:21 api=ok w1=200 w2=200 w3=200
+15:08:23 api=ok w1=200 w2=200 w3=200
+15:08:26 api=ok w1=200 w2=200 w3=200
+15:08:28 api=ok w1=200 w2=200 w3=200
+15:08:30 api=ok w1=200 w2=200 w3=200
+15:08:32 api=ok w1=200 w2=200 w3=200
+15:08:34 api=ok w1=200 w2=200 w3=200
+15:08:36 api=ok w1=200 w2=200 w3=200
+15:08:38 api=ok w1=200 w2=200 w3=200
+15:08:40 api=ok w1=200 w2=200 w3=200
+15:08:42 api=ok w1=200 w2=200 w3=200
+15:08:44 api=ok w1=200 w2=200 w3=200
+15:08:46 api=ok w1=200 w2=200 w3=200
+15:08:48 api=ok w1=200 w2=200 w3=200
+15:08:50 api=ok w1=200 w2=200 w3=200
+15:08:52 api=ok w1=200 w2=200 w3=200
+15:08:54 api=ok w1=200 w2=200 w3=200
+15:08:56 api=ok w1=200 w2=200 w3=200
+15:08:59 api=ok w1=200 w2=200 w3=200
+15:09:01 api=ok w1=200 w2=200 w3=200
+15:09:03 api=ok w1=200 w2=200 w3=200
+15:09:05 api=ok w1=200 w2=200 w3=200
+15:09:07 api=ok w1=200 w2=200 w3=200
+15:09:09 api=ok w1=200 w2=200 w3=200
+15:09:11 api=ok w1=200 w2=200 w3=200
+15:09:13 api=ok w1=200 w2=200 w3=200
+15:09:15 api=ok w1=200 w2=200 w3=200
+15:09:17 api=ok w1=200 w2=200 w3=200
+15:09:19 api=ok w1=200 w2=200 w3=200
+15:09:21 api=ok w1=200 w2=200 w3=200
+15:09:23 api=ok w1=200 w2=200 w3=200
+15:09:25 api=ok w1=200 w2=200 w3=200
+15:09:27 api=ok w1=200 w2=200 w3=200
+15:09:29 api=ok w1=200 w2=200 w3=200
+15:09:32 api=ok w1=200 w2=200 w3=200
+15:09:34 api=ok w1=200 w2=200 w3=200
+15:09:36 api=ok w1=200 w2=200 w3=200
+15:09:38 api=ok w1=200 w2=200 w3=200
+15:09:40 api=ok w1=200 w2=200 w3=200
+15:09:42 api=ok w1=200 w2=200 w3=200
+15:09:44 api=ok w1=200 w2=200 w3=200
+15:09:46 api=ok w1=200 w2=200 w3=200
+15:09:48 api=ok w1=200 w2=200 w3=200
+15:09:50 api=ok w1=200 w2=200 w3=200
+15:09:52 api=ok w1=200 w2=200 w3=200
+15:09:54 api=ok w1=200 w2=200 w3=200
+15:09:56 api=ok w1=200 w2=200 w3=200
+15:09:58 api={
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {},
+  "status": "Failure",
+  "message": "forbidden: User \"system:anonymous\" cannot get path \"/healthz\"",
+  "reason": "Forbidden",
+  "details": {},
+  "code": 403
+} w1=200 w2=200 w3=200
+15:10:00 api=ok w1=200 w2=200 w3=200
+15:10:03 api=ok w1=200 w2=200 w3=200
+15:10:05 api=ok w1=200 w2=200 w3=200
+15:10:07 api=ok w1=200 w2=200 w3=200
+15:10:09 api=ok w1=200 w2=200 w3=200
+15:10:11 api=ok w1=200 w2=200 w3=200
+15:10:13 api=ok w1=200 w2=200 w3=200
+15:10:15 api=ok w1=200 w2=200 w3=200
+15:10:17 api=ok w1=200 w2=200 w3=200
+15:10:19 api=ok w1=200 w2=200 w3=200
+15:10:21 api=ok w1=200 w2=200 w3=200
+15:10:23 api=ok w1=200 w2=200 w3=200
+15:10:25 api=ok w1=200 w2=200 w3=200
+15:10:27 api=ok w1=200 w2=200 w3=200
+15:10:29 api=ok w1=200 w2=200 w3=200
+15:10:31 api=ok w1=200 w2=200 w3=200
+15:10:33 api=ok w1=200 w2=200 w3=200
+15:10:36 api=ok w1=200 w2=200 w3=200
+15:10:38 api=ok w1=200 w2=200 w3=200
+15:10:40 api=ok w1=200 w2=200 w3=200
+15:10:42 api=ok w1=200 w2=200 w3=200
+15:10:44 api=ok w1=200 w2=200 w3=200
+15:10:46 api=ok w1=200 w2=200 w3=200
+15:10:48 api=ok w1=200 w2=200 w3=200
+15:10:50 api=ok w1=200 w2=200 w3=200
+15:10:52 api=ok w1=200 w2=200 w3=200
+15:10:54 api=ok w1=200 w2=200 w3=200
+15:10:56 api=ok w1=200 w2=200 w3=200
+15:10:58 api=ok w1=200 w2=200 w3=200
+15:11:00 api=ok w1=200 w2=200 w3=200
+15:11:02 api=ok w1=200 w2=200 w3=200
+15:11:04 api=ok w1=200 w2=200 w3=200
+15:11:06 api=ok w1=200 w2=200 w3=200
+15:11:09 api=ok w1=200 w2=200 w3=200
+15:11:11 api=ok w1=200 w2=200 w3=200
+15:11:13 api=ok w1=200 w2=200 w3=200
+15:11:15 api=ok w1=200 w2=200 w3=200
+15:11:17 api=ok w1=200 w2=200 w3=200
+15:11:19 api=ok w1=200 w2=200 w3=200
+15:11:21 api=ok w1=200 w2=200 w3=200
+15:11:23 api=ok w1=200 w2=200 w3=200
+15:11:25 api=ok w1=200 w2=200 w3=200
+15:11:27 api=ok w1=200 w2=200 w3=200
+15:11:29 api=ok w1=200 w2=200 w3=200
+15:11:31 api=ok w1=200 w2=200 w3=200
+15:11:33 api=ok w1=200 w2=200 w3=200
+15:11:35 api=ok w1=200 w2=200 w3=200
+15:11:37 api=ok w1=200 w2=200 w3=200
+15:11:39 api=ok w1=200 w2=200 w3=200
+15:11:41 api=ok w1=200 w2=200 w3=200
+15:11:44 api=ok w1=200 w2=200 w3=200
+15:11:46 api=ok w1=200 w2=200 w3=200
+15:11:48 api=ok w1=200 w2=200 w3=200
+15:11:50 api=ok w1=200 w2=200 w3=200
+15:11:52 api=ok w1=200 w2=200 w3=200
+15:11:54 api=ok w1=200 w2=200 w3=200
+15:11:56 api=ok w1=200 w2=200 w3=200
+15:11:58 api=ok w1=200 w2=200 w3=200
+15:12:00 api=ok w1=200 w2=200 w3=200
+15:12:02 api=ok w1=200 w2=200 w3=200
+15:12:04 api=ok w1=200 w2=200 w3=200
+15:12:06 api=ok w1=200 w2=200 w3=200
+15:12:08 api=ok w1=200 w2=200 w3=200
+15:12:10 api=ok w1=200 w2=200 w3=200
+15:12:12 api=ok w1=200 w2=200 w3=200
+15:12:15 api=ok w1=200 w2=200 w3=200
+15:12:17 api=ok w1=200 w2=200 w3=200
+15:12:19 api=ok w1=200 w2=200 w3=200
+15:12:21 api=ok w1=200 w2=200 w3=200
+15:12:23 api=ok w1=200 w2=200 w3=200
+15:12:25 api=ok w1=200 w2=200 w3=200
+15:12:27 api=ok w1=200 w2=200 w3=200
+15:12:29 api=ok w1=200 w2=200 w3=200
+15:12:31 api=ok w1=200 w2=200 w3=200
+15:12:33 api=ok w1=200 w2=200 w3=200
+15:12:35 api=ok w1=200 w2=200 w3=200
+15:12:37 api=ok w1=200 w2=200 w3=200
+15:12:39 api=ok w1=200 w2=200 w3=200
+15:12:41 api=ok w1=200 w2=200 w3=200
+15:12:43 api=ok w1=200 w2=200 w3=200
+15:12:45 api=ok w1=200 w2=200 w3=200
+15:12:47 api=ok w1=200 w2=200 w3=200
+15:12:50 api=ok w1=200 w2=200 w3=200
+15:12:52 api=ok w1=200 w2=200 w3=200
+15:12:54 api=ok w1=200 w2=200 w3=200
+15:12:56 api=ok w1=200 w2=200 w3=200
+15:12:58 api=ok w1=200 w2=200 w3=200
+15:13:00 api=ok w1=200 w2=200 w3=200
+15:13:02 api=ok w1=200 w2=200 w3=200
+15:13:04 api=ok w1=200 w2=200 w3=200
+15:13:06 api=ok w1=200 w2=200 w3=200
+15:13:08 api=ok w1=200 w2=200 w3=200
+15:13:10 api=ok w1=200 w2=200 w3=200
+15:13:12 api=ok w1=200 w2=200 w3=200
+15:13:14 api=ok w1=200 w2=200 w3=200
+15:13:16 api=ok w1=200 w2=200 w3=200
+15:13:18 api=ok w1=200 w2=200 w3=200
+15:13:20 api=ok w1=200 w2=200 w3=200
+15:13:23 api=ok w1=200 w2=200 w3=200
+15:13:25 api=ok w1=200 w2=200 w3=200
+15:13:27 api=ok w1=200 w2=200 w3=200
+15:13:29 api=ok w1=200 w2=200 w3=200
+15:13:31 api=ok w1=200 w2=200 w3=200
+15:13:33 api=ok w1=200 w2=200 w3=200
+15:13:35 api=ok w1=200 w2=200 w3=200
+15:13:37 api=ok w1=200 w2=200 w3=200
+15:13:39 api=ok w1=200 w2=200 w3=200
+15:13:41 api=ok w1=200 w2=200 w3=200
+15:13:43 api=ok w1=200 w2=200 w3=200
+15:13:45 api=ok w1=200 w2=200 w3=200
+15:13:47 api=ok w1=200 w2=200 w3=200
+15:13:49 api=ok w1=200 w2=200 w3=200
+15:13:51 api=ok w1=200 w2=200 w3=200
+15:13:53 api=ok w1=200 w2=200 w3=200
+15:13:56 api=ok w1=200 w2=200 w3=200
+15:13:58 api=ok w1=200 w2=200 w3=200
+15:14:00 api=ok w1=200 w2=200 w3=200
+15:14:02 api=ok w1=200 w2=200 w3=200
+15:14:04 api=ok w1=200 w2=200 w3=200
+15:14:06 api=ok w1=200 w2=200 w3=200
+15:14:08 api=ok w1=200 w2=200 w3=200
+15:14:10 api=ok w1=200 w2=200 w3=200
+15:14:12 api=ok w1=200 w2=200 w3=200
+15:14:14 api=ok w1=200 w2=200 w3=200
+15:14:16 api=ok w1=200 w2=200 w3=200
+15:14:18 api=ok w1=200 w2=200 w3=200
+15:14:20 api=ok w1=200 w2=200 w3=200
+15:14:22 api=ok w1=200 w2=200 w3=200
+15:14:24 api=ok w1=200 w2=200 w3=200
+15:14:27 api=ok w1=200 w2=200 w3=200
+15:14:29 api=ok w1=200 w2=200 w3=200
+15:14:31 api=ok w1=200 w2=200 w3=200
+15:14:33 api=ok w1=200 w2=200 w3=200
+15:14:35 api=ok w1=200 w2=200 w3=200
+15:14:37 api=ok w1=200 w2=200 w3=200
+15:14:39 api=ok w1=200 w2=200 w3=200
+15:14:41 api=ok w1=200 w2=200 w3=200
+15:14:43 api=ok w1=200 w2=200 w3=200
+15:14:45 api=ok w1=200 w2=200 w3=200
+15:14:47 api=ok w1=200 w2=200 w3=200
+15:14:49 api=ok w1=200 w2=200 w3=200
+15:14:51 api=ok w1=200 w2=200 w3=200
+15:14:53 api=ok w1=200 w2=200 w3=200
+15:14:55 api=ok w1=200 w2=200 w3=200
+15:14:57 api=ok w1=200 w2=200 w3=200
+15:14:59 api=ok w1=200 w2=200 w3=200
+15:15:02 api=ok w1=200 w2=200 w3=200
+15:15:04 api=ok w1=200 w2=200 w3=200
+15:15:06 api=ok w1=200 w2=200 w3=200
+15:15:08 api=ok w1=200 w2=200 w3=200
+15:15:10 api=ok w1=200 w2=200 w3=200
+15:15:12 api=ok w1=200 w2=200 w3=200
+15:15:14 api=ok w1=200 w2=200 w3=200
+15:15:16 api=ok w1=200 w2=200 w3=200
+15:15:18 api=ok w1=200 w2=200 w3=200
+15:15:20 api=ok w1=200 w2=200 w3=200
+15:15:22 api=ok w1=200 w2=200 w3=200
+15:15:24 api=ok w1=200 w2=200 w3=200
+15:15:26 api=ok w1=200 w2=200 w3=200
+15:15:29 api=ok w1=200 w2=200 w3=200
+15:15:31 api=ok w1=200 w2=200 w3=200
+15:15:33 api=ok w1=200 w2=200 w3=200
+15:15:35 api=ok w1=200 w2=200 w3=200
+15:15:37 api=ok w1=200 w2=200 w3=200
+15:15:39 api=ok w1=200 w2=200 w3=200
+15:15:41 api=ok w1=200 w2=200 w3=200
+15:15:43 api=ok w1=200 w2=200 w3=200
+15:15:45 api=ok w1=200 w2=200 w3=200
+15:15:47 api=ok w1=200 w2=200 w3=200
+15:15:49 api=ok w1=200 w2=200 w3=200
+15:15:51 api=ok w1=200 w2=200 w3=200
+15:15:53 api=ok w1=200 w2=200 w3=200
+15:15:56 api=ok w1=200 w2=200 w3=200
+15:15:58 api=ok w1=200 w2=200 w3=200
+15:16:00 api=ok w1=200 w2=200 w3=200
+15:16:02 api=ok w1=200 w2=200 w3=200
+15:16:04 api=ok w1=200 w2=200 w3=200
+15:16:06 api=ok w1=200 w2=200 w3=200
+15:16:08 api=ok w1=200 w2=200 w3=200
+15:16:10 api=ok w1=200 w2=200 w3=200
+15:16:12 api=ok w1=200 w2=200 w3=200
+15:16:14 api=ok w1=200 w2=200 w3=200
+15:16:16 api=ok w1=200 w2=200 w3=200
+15:16:18 api=ok w1=200 w2=200 w3=200
+15:16:20 api=ok w1=200 w2=200 w3=200
+15:16:22 api=ok w1=200 w2=200 w3=200
+15:16:25 api=ok w1=200 w2=200 w3=200
+15:16:27 api=ok w1=200 w2=200 w3=200
+15:16:29 api=ok w1=200 w2=200 w3=200
+15:16:31 api=ok w1=200 w2=200 w3=200
+15:16:33 api=ok w1=200 w2=200 w3=200
+15:16:35 api=ok w1=000 w2=200 w3=200
+15:16:37 api=ok w1=200 w2=200 w3=200
+15:16:39 api=ok w1=200 w2=200 w3=200
+15:16:41 api=ok w1=200 w2=200 w3=200
+15:16:43 api=ok w1=200 w2=200 w3=200
+15:16:45 api=ok w1=200 w2=200 w3=200
+15:16:47 api=ok w1=200 w2=200 w3=200
+15:16:49 api=ok w1=200 w2=200 w3=200
+15:16:51 api=ok w1=200 w2=200 w3=200
+15:16:53 api=ok w1=200 w2=200 w3=200
+15:16:55 api=ok w1=200 w2=200 w3=200
+15:16:58 api=ok w1=200 w2=200 w3=200
+15:17:00 api=ok w1=200 w2=200 w3=200
+15:17:02 api=ok w1=200 w2=200 w3=200
+15:17:04 api=ok w1=200 w2=200 w3=200
+15:17:06 api=ok w1=200 w2=200 w3=200
+15:17:08 api=ok w1=200 w2=200 w3=200
+15:17:10 api=ok w1=200 w2=200 w3=200
+15:17:12 api=ok w1=200 w2=200 w3=200
+15:17:14 api=ok w1=200 w2=200 w3=200
+15:17:16 api=ok w1=200 w2=200 w3=200
+15:17:18 api=ok w1=200 w2=200 w3=200
+15:17:20 api=ok w1=200 w2=200 w3=200
+15:17:22 api=ok w1=200 w2=200 w3=200
+15:17:24 api=ok w1=200 w2=200 w3=200
+15:17:27 api=ok w1=200 w2=200 w3=200
+15:17:29 api=ok w1=200 w2=200 w3=200
+15:17:31 api=ok w1=200 w2=200 w3=200
+15:17:33 api=ok w1=200 w2=200 w3=200
+15:17:35 api=ok w1=200 w2=200 w3=200
+15:17:37 api=ok w1=200 w2=200 w3=200
+15:17:39 api=ok w1=200 w2=200 w3=200
+15:17:41 api=ok w1=200 w2=200 w3=200
+15:17:43 api=ok w1=200 w2=200 w3=200
+15:17:45 api=ok w1=200 w2=200 w3=200
+15:17:47 api=ok w1=200 w2=200 w3=200
+15:17:49 api=ok w1=200 w2=200 w3=200
+15:17:51 api=ok w1=200 w2=200 w3=200
+15:17:53 api=ok w1=200 w2=200 w3=200
+15:17:55 api=ok w1=200 w2=200 w3=200
+15:17:57 api=ok w1=200 w2=200 w3=200
+15:18:00 api=ok w1=200 w2=200 w3=200
+15:18:02 api=ok w1=200 w2=200 w3=200
+15:18:04 api=ok w1=200 w2=200 w3=200
+15:18:06 api=ok w1=200 w2=200 w3=200
+15:18:08 api=ok w1=200 w2=200 w3=200
+15:18:10 api=ok w1=200 w2=200 w3=200
+15:18:12 api=ok w1=200 w2=200 w3=200
+15:18:14 api=ok w1=200 w2=200 w3=200
+15:18:16 api=ok w1=200 w2=200 w3=200
+15:18:18 api=ok w1=200 w2=200 w3=200
+15:18:20 api=ok w1=200 w2=200 w3=200
+15:18:22 api=ok w1=200 w2=200 w3=200
+15:18:24 api=ok w1=200 w2=200 w3=200
+15:18:26 api=ok w1=200 w2=200 w3=200
+15:18:28 api=ok w1=200 w2=200 w3=200
+15:18:31 api=ok w1=200 w2=200 w3=200
+15:18:33 api=ok w1=200 w2=200 w3=200
+15:18:35 api=ok w1=200 w2=200 w3=200
+15:18:37 api=ok w1=200 w2=200 w3=200
+15:18:39 api=ok w1=200 w2=200 w3=200
+15:18:41 api=ok w1=200 w2=200 w3=200
+15:18:43 api=ok w1=200 w2=200 w3=200
+15:18:45 api=ok w1=200 w2=200 w3=200
+15:18:47 api=ok w1=200 w2=200 w3=200
+15:18:49 api=ok w1=200 w2=200 w3=200
+15:18:51 api=ok w1=200 w2=200 w3=200
+15:18:53 api=ok w1=200 w2=200 w3=200
+15:18:55 api=ok w1=200 w2=200 w3=200
+15:18:57 api=ok w1=200 w2=200 w3=200
+15:18:59 api=ok w1=200 w2=200 w3=200
+15:19:01 api=ok w1=200 w2=200 w3=200
+15:19:04 api=ok w1=200 w2=200 w3=200
+15:19:06 api=ok w1=200 w2=200 w3=200
+15:19:08 api=ok w1=200 w2=200 w3=200
+15:19:10 api=ok w1=200 w2=200 w3=200
+15:19:12 api=ok w1=200 w2=200 w3=200
+15:19:14 api=ok w1=200 w2=200 w3=200
+15:19:16 api=ok w1=200 w2=200 w3=200
+15:19:18 api=ok w1=200 w2=200 w3=200
+15:19:20 api=ok w1=200 w2=200 w3=200
+15:19:22 api=ok w1=200 w2=200 w3=200
+15:19:24 api=ok w1=200 w2=200 w3=200
+15:19:26 api=ok w1=200 w2=200 w3=200
+15:19:28 api=ok w1=200 w2=200 w3=200
+15:19:30 api=ok w1=200 w2=200 w3=200
+15:19:32 api=ok w1=200 w2=200 w3=200
+15:19:34 api=ok w1=200 w2=200 w3=200
+15:19:36 api=ok w1=200 w2=200 w3=200
+15:19:39 api=ok w1=200 w2=200 w3=200
+15:19:41 api=ok w1=200 w2=200 w3=200
+15:19:43 api=ok w1=200 w2=200 w3=200
+15:19:45 api=ok w1=200 w2=200 w3=200
+15:19:47 api=ok w1=200 w2=200 w3=200
+15:19:49 api=ok w1=200 w2=200 w3=200
+15:19:51 api=ok w1=200 w2=200 w3=200
+15:19:53 api=ok w1=200 w2=200 w3=200
+15:19:55 api=ok w1=200 w2=200 w3=200
+15:19:57 api=ok w1=200 w2=200 w3=200
+15:19:59 api=ok w1=200 w2=200 w3=200
+15:20:01 api=ok w1=200 w2=200 w3=200
+15:20:03 api=ok w1=200 w2=200 w3=200
+15:20:05 api=ok w1=200 w2=200 w3=200
+15:20:08 api=ok w1=200 w2=200 w3=200
+15:20:10 api=ok w1=200 w2=200 w3=200
+15:20:12 api=ok w1=200 w2=200 w3=200
+15:20:14 api=ok w1=200 w2=200 w3=200
+15:20:16 api=ok w1=200 w2=200 w3=200
+15:20:18 api=ok w1=200 w2=200 w3=200
+15:20:20 api=ok w1=200 w2=200 w3=200
+15:20:22 api=ok w1=200 w2=200 w3=200
+15:20:24 api=ok w1=200 w2=200 w3=200
+15:20:26 api=ok w1=200 w2=200 w3=200
+15:20:28 api=ok w1=200 w2=200 w3=200
+15:20:30 api=ok w1=200 w2=200 w3=200
+15:20:32 api=ok w1=200 w2=200 w3=200
+15:20:34 api=ok w1=200 w2=200 w3=200
+15:20:36 api=ok w1=200 w2=200 w3=200
+15:20:38 api=ok w1=200 w2=200 w3=200
+15:20:40 api=ok w1=200 w2=200 w3=200
+15:20:43 api=ok w1=200 w2=200 w3=200
+15:20:45 api=ok w1=200 w2=200 w3=200
+15:20:47 api=ok w1=200 w2=200 w3=200
+15:20:49 api=ok w1=200 w2=200 w3=200
+15:20:51 api=ok w1=200 w2=200 w3=200
+15:20:53 api=ok w1=200 w2=200 w3=200
+15:20:55 api=ok w1=200 w2=200 w3=200
+15:20:57 api=ok w1=200 w2=200 w3=200
+15:20:59 api=ok w1=200 w2=200 w3=200
+15:21:01 api=ok w1=200 w2=200 w3=200
+15:21:03 api=ok w1=200 w2=200 w3=200
+15:21:05 api=ok w1=200 w2=200 w3=200
+15:21:07 api=ok w1=200 w2=200 w3=200
+15:21:09 api=ok w1=200 w2=200 w3=200
+15:21:11 api=ok w1=200 w2=200 w3=200
+15:21:14 api=ok w1=200 w2=200 w3=200
+15:21:16 api=ok w1=200 w2=200 w3=200
+15:21:18 api=ok w1=200 w2=200 w3=200
+15:21:20 api=ok w1=200 w2=200 w3=200
+15:21:22 api=ok w1=200 w2=200 w3=200
+15:21:24 api=ok w1=200 w2=200 w3=200
+15:21:26 api=ok w1=200 w2=200 w3=200
+15:21:28 api=ok w1=200 w2=200 w3=200
+15:21:30 api=ok w1=200 w2=200 w3=200
+15:21:32 api=ok w1=200 w2=200 w3=200
+15:21:34 api=ok w1=200 w2=200 w3=200
+15:21:36 api=ok w1=200 w2=200 w3=200
+15:21:38 api=ok w1=200 w2=200 w3=200
+15:21:40 api=ok w1=200 w2=200 w3=200
+15:21:42 api=ok w1=200 w2=200 w3=200
+15:21:44 api=ok w1=200 w2=200 w3=200
+15:21:47 api=ok w1=200 w2=200 w3=200
+15:21:49 api=ok w1=200 w2=200 w3=200
+15:21:51 api=ok w1=200 w2=200 w3=200
+15:21:53 api=ok w1=200 w2=200 w3=200
+15:21:55 api=ok w1=200 w2=200 w3=200

@@ -1,0 +1,120 @@
+---
+# Upgrades one node. upgrade_mode is "apply" (first control plane) or "node".
+- name: Load the target chosen on the first control plane
+  ansible.builtin.set_fact:
+    tpkg: "{{ hostvars[groups['control_plane'][0]].target_pkg }}"
+    tver: "{{ hostvars[groups['control_plane'][0]].target_ver }}"
+
+- name: Read this node's current kubelet version
+  ansible.builtin.command: "kubectl get node {{ inventory_hostname }} -o jsonpath='{.status.nodeInfo.kubeletVersion}'"
+  register: current_version
+  until: current_version.rc == 0
+  retries: 10
+  delay: 6
+  delegate_to: localhost
+  become: false
+  changed_when: false
+
+- name: Upgrade this node (skipped if it is already on the target version)
+  when: current_version.stdout != 'v' ~ tver
+  block:
+    - ansible.builtin.include_tasks: repo.yml
+
+    - name: Unhold kubeadm
+      ansible.builtin.dpkg_selections:
+        name: kubeadm
+        selection: install
+
+    - name: Install the target kubeadm
+      ansible.builtin.apt:
+        name: "kubeadm={{ tpkg }}"
+        state: present
+        update_cache: true
+
+    - name: Hold kubeadm
+      ansible.builtin.dpkg_selections:
+        name: kubeadm
+        selection: hold
+
+    - name: Show the upgrade plan (first control plane only)
+      ansible.builtin.command: kubeadm upgrade plan
+      register: upgrade_plan
+      changed_when: false
+      when: upgrade_mode == 'apply'
+
+    - name: Print the upgrade plan
+      ansible.builtin.debug:
+        var: upgrade_plan.stdout_lines
+      when: upgrade_mode == 'apply'
+
+    - name: Upgrade the control plane components (first control plane)
+      ansible.builtin.command: "kubeadm upgrade apply v{{ tver }} -y"
+      when: upgrade_mode == 'apply'
+
+    - name: Upgrade this node's components and configuration
+      ansible.builtin.command: kubeadm upgrade node
+      when: upgrade_mode == 'node'
+
+    - name: Drain the node
+      ansible.builtin.command: "kubectl drain {{ inventory_hostname }} --ignore-daemonsets --delete-emptydir-data --timeout=300s"
+      register: drain
+      until: drain.rc == 0
+      retries: 3
+      delay: 15
+      delegate_to: localhost
+      become: false
+
+    - name: Unhold kubelet and kubectl
+      ansible.builtin.dpkg_selections:
+        name: "{{ item }}"
+        selection: install
+      loop: [kubelet, kubectl]
+
+    - name: Install the target kubelet and kubectl
+      ansible.builtin.apt:
+        name:
+          - "kubelet={{ tpkg }}"
+          - "kubectl={{ tpkg }}"
+        state: present
+
+    - name: Hold kubelet and kubectl
+      ansible.builtin.dpkg_selections:
+        name: "{{ item }}"
+        selection: hold
+      loop: [kubelet, kubectl]
+
+    - name: Restart kubelet on the new version
+      ansible.builtin.systemd:
+        name: kubelet
+        state: restarted
+        daemon_reload: true
+
+    - name: Wait until the node reports the target version
+      ansible.builtin.command: "kubectl get node {{ inventory_hostname }} -o jsonpath='{.status.nodeInfo.kubeletVersion}'"
+      register: new_version
+      until: new_version.stdout == 'v' ~ tver
+      retries: 30
+      delay: 5
+      delegate_to: localhost
+      become: false
+      changed_when: false
+
+- name: Wait until the node is Ready (retries cover a restarting API server)
+  ansible.builtin.command: "kubectl wait --for=condition=Ready node/{{ inventory_hostname }} --timeout=60s"
+  register: node_ready
+  until: node_ready.rc == 0
+  retries: 20
+  delay: 10
+  delegate_to: localhost
+  become: false
+  changed_when: false
+
+- name: Make sure the node is schedulable again
+  ansible.builtin.command: "kubectl uncordon {{ inventory_hostname }}"
+  register: uncordon
+  until: uncordon.rc == 0
+  retries: 20
+  delay: 10
+  changed_when: "'already uncordoned' not in uncordon.stdout"
+  delegate_to: localhost
+  become: false

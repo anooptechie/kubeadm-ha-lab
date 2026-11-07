@@ -1,0 +1,42 @@
+---
+# Rolling upgrade to the next minor version, one node at a time.
+# Usage: ansible-playbook upgrade.yml -e target_minor=1.37
+- name: Upgrade the first control plane
+  hosts: control_plane[0]
+  become: true
+  tasks:
+    - ansible.builtin.assert:
+        that: target_minor is defined
+        fail_msg: "Pass -e target_minor=1.37"
+
+    - ansible.builtin.include_role:
+        name: k8s_upgrade
+        tasks_from: target
+
+    - ansible.builtin.include_role:
+        name: k8s_upgrade
+        tasks_from: node_upgrade
+      vars:
+        upgrade_mode: apply
+
+- name: Upgrade the other control planes, one at a time
+  hosts: control_plane[1:]
+  become: true
+  serial: 1
+  tasks:
+    - ansible.builtin.include_role:
+        name: k8s_upgrade
+        tasks_from: node_upgrade
+      vars:
+        upgrade_mode: node
+
+- name: Upgrade the workers, one at a time
+  hosts: workers
+  become: true
+  serial: 1
+  tasks:
+    - ansible.builtin.include_role:
+        name: k8s_upgrade
+        tasks_from: node_upgrade
+      vars:
+        upgrade_mode: node

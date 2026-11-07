@@ -1,0 +1,44 @@
+## After upgrade
+NAME      STATUS   ROLES           AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION           CONTAINER-RUNTIME
+cp1       Ready    control-plane   9h      v1.37.2   10.20.11.201   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp2       Ready    control-plane   6h23m   v1.37.2   10.20.12.77    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp3       Ready    control-plane   6h23m   v1.37.2   10.20.13.73    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker1   Ready    <none>          7h23m   v1.37.2   10.20.11.85    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker2   Ready    <none>          7h23m   v1.37.2   10.20.12.8     <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker3   Ready    <none>          6h23m   v1.37.2   10.20.13.40    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+## Pods not Running
+No resources found
+## Calico
+NAME        AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
+apiserver   True        False         False      4m31s   All objects available
+calico      True        False         False      13m     All objects available
+goldmane    True        False         False      4m21s   All objects available
+ippools     True        False         False      8h      All objects available
+tiers       True        False         False      8h      All objects available
+whisker     True        False         False      12m     All objects available
+## System pods
+coredns-559f6c778d-7bj28      1/1     Running   0             12m     192.168.121.69   cp2       <none>           <none>
+coredns-559f6c778d-ghlhc      1/1     Running   0             5m23s   192.168.155.5    cp3       <none>           <none>
+etcd-cp1                      1/1     Running   1 (28m ago)   28m     10.20.11.201     cp1       <none>           <none>
+etcd-cp2                      1/1     Running   1 (24m ago)   24m     10.20.12.77      cp2       <none>           <none>
+etcd-cp3                      1/1     Running   0             11m     10.20.13.73      cp3       <none>           <none>
+kube-apiserver-cp1            1/1     Running   1 (28m ago)   28m     10.20.11.201     cp1       <none>           <none>
+kube-apiserver-cp2            1/1     Running   1 (24m ago)   24m     10.20.12.77      cp2       <none>           <none>
+kube-apiserver-cp3            1/1     Running   1 (12m ago)   12m     10.20.13.73      cp3       <none>           <none>
+kube-proxy-6h746              1/1     Running   0             12m     10.20.13.73      cp3       <none>           <none>
+kube-proxy-7lhxz              1/1     Running   0             12m     10.20.12.77      cp2       <none>           <none>
+kube-proxy-8ks4z              1/1     Running   0             12m     10.20.11.85      worker1   <none>           <none>
+kube-proxy-b4str              1/1     Running   0             12m     10.20.11.201     cp1       <none>           <none>
+kube-proxy-h6xcx              1/1     Running   0             12m     10.20.13.40      worker3   <none>           <none>
+kube-proxy-xlxqf              1/1     Running   0             12m     10.20.12.8       worker2   <none>           <none>
+## PDB demo
+NAME                       READY   STATUS    RESTARTS   AGE
+pod/web-5f9dfd4f59-7mjdk   1/1     Running   0          4m32s
+pod/web-5f9dfd4f59-gzjt4   1/1     Running   0          5m23s
+pod/web-5f9dfd4f59-pzvw4   1/1     Running   0          4m37s
+pod/web-5f9dfd4f59-wbjwj   1/1     Running   0          5m18s
+
+NAME                                 MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/web-pdb   3               N/A               1                     5h10m
+## etcd image
+registry.k8s.io/etcd:3.7.0-0

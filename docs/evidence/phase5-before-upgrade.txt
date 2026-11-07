@@ -1,0 +1,16 @@
+## Before upgrade
+NAME      STATUS   ROLES           AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION           CONTAINER-RUNTIME
+cp1       Ready    control-plane   8h      v1.36.6   10.20.11.201   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp2       Ready    control-plane   5h50m   v1.36.6   10.20.12.77    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp3       Ready    control-plane   5h50m   v1.36.6   10.20.13.73    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker1   Ready    <none>          6h50m   v1.36.6   10.20.11.85    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker2   Ready    <none>          6h50m   v1.36.6   10.20.12.8     <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker3   Ready    <none>          5h50m   v1.36.6   10.20.13.40    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+NAME                       READY   STATUS    RESTARTS   AGE
+pod/web-5f9dfd4f59-2bn92   1/1     Running   0          4h37m
+pod/web-5f9dfd4f59-6xnw6   1/1     Running   0          4h34m
+pod/web-5f9dfd4f59-sndbh   1/1     Running   0          4h32m
+pod/web-5f9dfd4f59-xcz85   1/1     Running   0          4h29m
+
+NAME                                 MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/web-pdb   3               N/A               1                     4h37m

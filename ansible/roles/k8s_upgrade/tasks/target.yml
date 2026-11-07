@@ -1,0 +1,25 @@
+---
+# Runs on the first control plane only: switch the repo and pick the newest
+# patch of the target minor. Every other node reuses this choice.
+- ansible.builtin.include_tasks: repo.yml
+
+- name: Find the newest patch available for the target minor
+  ansible.builtin.shell: >-
+    apt-cache madison kubeadm | awk '{print $3}'
+    | grep '^{{ target_minor }}\.' | sort -V | tail -n 1
+  register: madison
+  changed_when: false
+
+- name: Stop if the target version is not available
+  ansible.builtin.assert:
+    that: madison.stdout != ""
+    fail_msg: "No kubeadm {{ target_minor }}.x package found. Check the repository."
+
+- name: Remember the target package and version
+  ansible.builtin.set_fact:
+    target_pkg: "{{ madison.stdout }}"
+    target_ver: "{{ madison.stdout.split('-')[0] }}"
+
+- name: Show the target
+  ansible.builtin.debug:
+    msg: "Upgrading from {{ k8s_package_version }} to package {{ target_pkg }} (v{{ target_ver }})"
