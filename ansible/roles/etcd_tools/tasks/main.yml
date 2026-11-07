@@ -1,0 +1,23 @@
+---
+- name: Create the directory for this etcd version
+  ansible.builtin.file:
+    path: "/opt/etcd-{{ etcd_version }}"
+    state: directory
+    mode: "0755"
+
+- name: Download and unpack the etcd release (matches the cluster version)
+  ansible.builtin.unarchive:
+    src: "https://github.com/etcd-io/etcd/releases/download/v{{ etcd_version }}/etcd-v{{ etcd_version }}-linux-amd64.tar.gz"
+    dest: "/opt/etcd-{{ etcd_version }}"
+    remote_src: true
+    extra_opts: ["--strip-components=1"]
+    creates: "/opt/etcd-{{ etcd_version }}/etcdctl"
+
+- name: Link etcdctl and etcdutl into the PATH
+  ansible.builtin.file:
+    src: "/opt/etcd-{{ etcd_version }}/{{ item }}"
+    dest: "/usr/local/bin/{{ item }}"
+    state: link
+  loop:
+    - etcdctl
+    - etcdutl

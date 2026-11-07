@@ -1,0 +1,41 @@
+---
+- name: Make sure the etcd tools are installed on the control planes
+  hosts: control_plane
+  become: true
+  roles:
+    - etcd_tools
+
+- name: Take an etcd backup and copy it to the workstation
+  hosts: control_plane[0]
+  become: true
+  tasks:
+    - name: Install the backup script
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/../backup/etcd-snapshot.sh"
+        dest: /usr/local/bin/etcd-snapshot.sh
+        owner: root
+        group: root
+        mode: "0755"
+
+    - name: Run the backup
+      ansible.builtin.command: /usr/local/bin/etcd-snapshot.sh
+      register: backup_run
+      changed_when: true
+
+    - name: Show the snapshot status
+      ansible.builtin.debug:
+        var: backup_run.stdout_lines
+
+    - name: Remember the backup directory
+      ansible.builtin.set_fact:
+        backup_dir: "{{ backup_run.stdout_lines[-1] }}"
+
+    - name: Copy the backup files to the workstation (outside the repo)
+      ansible.builtin.fetch:
+        src: "{{ backup_dir }}/{{ item }}"
+        dest: "/home/ubuntu/etcd-backups/{{ backup_dir | basename }}/"
+        flat: true
+      loop:
+        - etcd-snapshot.db
+        - kubernetes-dir.tar.gz
+        - SHA256SUMS

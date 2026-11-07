@@ -1,0 +1,7 @@
+## etcd backup taken 2026-11-07T13:05:10Z
+total 11M
+-rw-rw-r-- 1 ubuntu ubuntu 171 Nov  7 13:01 SHA256SUMS
+-rw-rw-r-- 1 ubuntu ubuntu 11M Nov  7 13:01 etcd-snapshot.db
+-rw-rw-r-- 1 ubuntu ubuntu 36K Nov  7 13:01 kubernetes-dir.tar.gz
+etcd-snapshot.db: OK
+kubernetes-dir.tar.gz: OK
