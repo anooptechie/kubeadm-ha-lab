@@ -13,3 +13,18 @@
   roles:
     - control_plane
     - calico
+
+- name: Create a join command on the control plane
+  hosts: control_plane[0]
+  become: true
+  tasks:
+    - name: Print a fresh join command (token valid for 24 hours)
+      ansible.builtin.command: kubeadm token create --print-join-command
+      register: join_command
+      changed_when: false
+
+- name: Join the worker nodes
+  hosts: workers
+  become: true
+  roles:
+    - worker
