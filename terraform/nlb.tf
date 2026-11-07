@@ -22,7 +22,9 @@ resource "aws_lb_target_group" "api" {
   deregistration_delay = 30
 
   health_check {
-    protocol            = "TCP"
+    protocol            = "HTTPS"
+    path                = "/readyz"
+    matcher             = "200"
     port                = "6443"
     interval            = 10
     healthy_threshold   = 2
