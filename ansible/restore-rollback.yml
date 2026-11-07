@@ -1,0 +1,52 @@
+---
+# ansible-playbook restore-rollback.yml -e restore_ts=<stamp from the restore output>
+- name: Put the pre-restore etcd data back
+  hosts: control_plane
+  become: true
+  vars:
+    crictl: crictl --runtime-endpoint unix:///run/containerd/containerd.sock
+  tasks:
+    - ansible.builtin.assert:
+        that: restore_ts is defined
+    - name: Park the kube-apiserver and etcd manifests
+      ansible.builtin.shell: |
+        mkdir -p /etc/kubernetes/manifests-disabled
+        mv /etc/kubernetes/manifests/kube-apiserver.yaml /etc/kubernetes/manifests-disabled/
+        mv /etc/kubernetes/manifests/etcd.yaml /etc/kubernetes/manifests-disabled/
+      args:
+        removes: /etc/kubernetes/manifests/etcd.yaml
+    - name: Wait until both have stopped
+      ansible.builtin.command: pgrep -x '(etcd|kube-apiserver)'
+      register: still_running
+      until: still_running.rc == 1
+      failed_when: still_running.rc > 1
+      retries: 30
+      delay: 5
+      changed_when: false
+    - name: Set the restored data aside
+      ansible.builtin.command: "mv /var/lib/etcd /var/lib/etcd.failed-restore-{{ restore_ts }}"
+      args:
+        removes: /var/lib/etcd
+    - name: Put the original data back
+      ansible.builtin.command: "mv /var/lib/etcd.pre-restore-{{ restore_ts }} /var/lib/etcd"
+      args:
+        removes: "/var/lib/etcd.pre-restore-{{ restore_ts }}"
+    - name: Bring back the etcd manifest
+      ansible.builtin.command: mv /etc/kubernetes/manifests-disabled/etcd.yaml /etc/kubernetes/manifests/
+      args:
+        removes: /etc/kubernetes/manifests-disabled/etcd.yaml
+    - name: Wait for etcd
+      ansible.builtin.command: >-
+        etcdctl --endpoints=https://127.0.0.1:2379
+        --cacert=/etc/kubernetes/pki/etcd/ca.crt
+        --cert=/etc/kubernetes/pki/etcd/server.crt
+        --key=/etc/kubernetes/pki/etcd/server.key endpoint health
+      register: etcd_health
+      until: etcd_health.rc == 0
+      retries: 40
+      delay: 5
+      changed_when: false
+    - name: Bring back the kube-apiserver manifest
+      ansible.builtin.command: mv /etc/kubernetes/manifests-disabled/kube-apiserver.yaml /etc/kubernetes/manifests/
+      args:
+        removes: /etc/kubernetes/manifests-disabled/kube-apiserver.yaml

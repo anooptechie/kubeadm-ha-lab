@@ -1,0 +1,101 @@
+---
+# ansible-playbook restore.yml -e snapshot_dir=/home/ubuntu/etcd-backups/<timestamp>
+- name: Check the snapshot on the workstation
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - ansible.builtin.assert:
+        that: snapshot_dir is defined
+        fail_msg: "Pass -e snapshot_dir=/home/ubuntu/etcd-backups/<timestamp>"
+    - name: Verify the snapshot checksums
+      ansible.builtin.command: sha256sum -c SHA256SUMS
+      args:
+        chdir: "{{ snapshot_dir }}"
+      changed_when: false
+    - name: Make a stamp for this restore
+      ansible.builtin.set_fact:
+        restore_ts: "{{ lookup('pipe', 'date -u +%Y%m%dT%H%M%SZ') }}"
+
+- name: Restore etcd on all control planes
+  hosts: control_plane
+  become: true
+  vars:
+    ts: "{{ hostvars['localhost'].restore_ts }}"
+    crictl: crictl --runtime-endpoint unix:///run/containerd/containerd.sock
+    initial_cluster: "{% for h in groups['control_plane'] %}{{ h }}=https://{{ hostvars[h].ansible_host }}:2380{{ ',' if not loop.last else '' }}{% endfor %}"
+  tasks:
+    - name: Check the etcd tools are present
+      ansible.builtin.command: etcdutl version
+      changed_when: false
+
+    - name: Copy the snapshot to the node
+      ansible.builtin.copy:
+        src: "{{ snapshot_dir }}/etcd-snapshot.db"
+        dest: /var/backups/etcd-restore.db
+        mode: "0600"
+
+    - name: Park the kube-apiserver and etcd manifests (stops both)
+      ansible.builtin.shell: |
+        mkdir -p /etc/kubernetes/manifests-disabled
+        mv /etc/kubernetes/manifests/kube-apiserver.yaml /etc/kubernetes/manifests-disabled/
+        mv /etc/kubernetes/manifests/etcd.yaml /etc/kubernetes/manifests-disabled/
+      args:
+        removes: /etc/kubernetes/manifests/etcd.yaml
+
+    - name: Wait until etcd and kube-apiserver have stopped
+      ansible.builtin.command: pgrep -x '(etcd|kube-apiserver)'
+      register: still_running
+      until: still_running.rc == 1
+      failed_when: still_running.rc > 1
+      retries: 30
+      delay: 5
+      changed_when: false
+
+    - name: Move the current etcd data aside (this is the rollback copy)
+      ansible.builtin.command: "mv /var/lib/etcd /var/lib/etcd.pre-restore-{{ ts }}"
+      args:
+        removes: /var/lib/etcd
+
+    - name: Restore the snapshot into a fresh data directory
+      ansible.builtin.command: >-
+        etcdutl snapshot restore /var/backups/etcd-restore.db
+        --name {{ inventory_hostname }}
+        --initial-cluster {{ initial_cluster }}
+        --initial-cluster-token etcd-restore-{{ ts }}
+        --initial-advertise-peer-urls https://{{ ansible_host }}:2380
+        --data-dir /var/lib/etcd
+
+    - name: Bring back the etcd manifest
+      ansible.builtin.command: mv /etc/kubernetes/manifests-disabled/etcd.yaml /etc/kubernetes/manifests/
+      args:
+        removes: /etc/kubernetes/manifests-disabled/etcd.yaml
+
+    - name: Wait for etcd to be healthy (needs the other members too)
+      ansible.builtin.command: >-
+        etcdctl --endpoints=https://127.0.0.1:2379
+        --cacert=/etc/kubernetes/pki/etcd/ca.crt
+        --cert=/etc/kubernetes/pki/etcd/server.crt
+        --key=/etc/kubernetes/pki/etcd/server.key endpoint health
+      register: etcd_health
+      until: etcd_health.rc == 0
+      retries: 40
+      delay: 5
+      changed_when: false
+
+    - name: Bring back the kube-apiserver manifest
+      ansible.builtin.command: mv /etc/kubernetes/manifests-disabled/kube-apiserver.yaml /etc/kubernetes/manifests/
+      args:
+        removes: /etc/kubernetes/manifests-disabled/kube-apiserver.yaml
+
+    - name: Wait for the API server to answer
+      ansible.builtin.command: curl -sk https://127.0.0.1:6443/healthz
+      register: api_health
+      until: api_health.stdout == "ok"
+      retries: 40
+      delay: 5
+      changed_when: false
+
+    - name: Report the restore stamp
+      ansible.builtin.debug:
+        msg: "Restore {{ ts }} done. Old data kept in /var/lib/etcd.pre-restore-{{ ts }}"

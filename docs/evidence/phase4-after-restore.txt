@@ -1,0 +1,18 @@
+## After restore (restore stamp 20261107T134631Z, playbook time 58s)
+NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/keep-me   2/2     2            2           32m
+
+NAME                         DATA   AGE
+configmap/important-data     1      32m
+configmap/kube-root-ca.crt   1      32m
+NAME      STATUS   ROLES           AGE     VERSION
+cp1       Ready    control-plane   7h48m   v1.36.6
+cp2       Ready    control-plane   4h52m   v1.36.6
+cp3       Ready    control-plane   4h51m   v1.36.6
+worker1   Ready    <none>          5h52m   v1.36.6
+worker2   Ready    <none>          5h52m   v1.36.6
+worker3   Ready    <none>          4h51m   v1.36.6
+https://10.20.11.201:2379 is healthy: successfully committed proposal: took = 10.87904ms
+https://10.20.12.77:2379 is healthy: successfully committed proposal: took = 18.612928ms
+https://10.20.13.73:2379 is healthy: successfully committed proposal: took = 23.793074ms
+No resources found
