@@ -1,11 +1,11 @@
 ---
 # The Kubernetes minor version this cluster is built on.
 # Changing this (plus the package version) is how the upgrade phase works later.
-k8s_minor: "1.36"
+k8s_minor: "1.37"
 
-# Package version. "1.36.*" installs the newest 1.36 patch.
+# Package version. "1.37.*" installs the newest 1.37 patch.
 # Once installed, record the exact version in versions.md.
-k8s_package_version: "1.36.*"
+k8s_package_version: "1.37.*"
 
 # Calico release installed by the operator
 calico_version: "v3.33.0"
