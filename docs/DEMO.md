@@ -1,7 +1,7 @@
 # Demo run sheet (about 10 minutes of drills)
 
 Build the lab first with the README (about 12 minutes of work). Everything below runs from the
-repository root on the workstation, with the Ansible virtualenv active. Last rehearsed: NOT YET.
+repository root on the workstation, with the Ansible virtualenv active. Last rehearsed: 2026-11-09.
 
 ## Before the demo
 ~~bash
@@ -49,26 +49,32 @@ kubectl get nodes
 Say: in 1b the drain repeats "Cannot evict pod as it would violate the pod's disruption budget"
 and times out, the budget shows 0 allowed disruptions, and the app stays at 3 ready pods.
 
-## Drill 2: lose a control plane (2 min)
-Terminal B (stops the API server on cp3 for 60 s, then restores it):
-~~bash
+## Drill 2: lose a control plane (3 min)
+Terminal B (stops the API server and the etcd member on cp3 for 90 s, then restores both):
+~~~bash
 cd ~/rebuild-test/ansible
-ansible cp3 -b -m shell -a "mv /etc/kubernetes/manifests/kube-apiserver.yaml /tmp/ && sleep 60 && mv /tmp/kube-apiserver.yaml /etc/kubernetes/manifests/"
-~~
-Terminal A, while that runs (retry once if the first call fails: the load balancer needs a few
-seconds to take the server out):
-~~bash
+ansible cp3 -b -m shell -a "mv /etc/kubernetes/manifests/kube-apiserver.yaml /tmp/ && mv /etc/kubernetes/manifests/etcd.yaml /tmp/ && sleep 90 && mv /tmp/etcd.yaml /etc/kubernetes/manifests/ && mv /tmp/kube-apiserver.yaml /etc/kubernetes/manifests/"
+~~~
+Terminal A, started right after B, from the repository root:
+~~~bash
+cd ~/rebuild-test
+EP=$(kubectl get nodes -l node-role.kubernetes.io/control-plane -o jsonpath='{range .items[*]}https://{.status.addresses[?(@.type=="InternalIP")].address}:2379,{end}' | sed 's/,$//')
 kubectl get nodes
-kubectl create deployment demo-ha --image=nginx:1.27
-kubectl get deployment demo-ha
-kubectl -n kube-system exec etcd-cp1 -- etcdctl --endpoints=https://10.20.11.91:2379,https://10.20.12.180:2379,https://10.20.13.199:2379 \
+sleep 40
+kubectl -n kube-system exec etcd-cp1 -- etcdctl --endpoints=$EP \
   --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt \
   --key=/etc/kubernetes/pki/etcd/server.key endpoint health
+kubectl create deployment demo-ha --image=nginx:1.27
+kubectl get deployment demo-ha
+~~~
+Say: the stopped member shows "connection refused" and is unhealthy, the other two are healthy, and the
+cluster still accepted a change, because etcd needs only 2 of its 3 members. (Wait the 40 s: the
+etcd member takes a few seconds to stop, and checking too early shows all three healthy.)
+After terminal B finishes (about 90 s):
+~~~bash
 kubectl delete deployment demo-ha
-~~
-Say: the cluster still accepts changes with one control plane down, because etcd keeps quorum (2 of 3).
-The etcd command lists node addresses from the original build: replace them with the IPs from
-`kubectl get nodes -o wide`.
+kubectl get nodes
+~~~
 
 ## Drill 3: etcd backup and restore (4 min)
 ~~bash
