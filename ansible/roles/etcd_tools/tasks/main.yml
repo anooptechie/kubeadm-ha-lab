@@ -5,12 +5,14 @@
     state: directory
     mode: "0755"
 
-- name: Download and unpack the etcd release (matches the cluster version)
-  ansible.builtin.unarchive:
-    src: "https://github.com/etcd-io/etcd/releases/download/v{{ etcd_version }}/etcd-v{{ etcd_version }}-linux-amd64.tar.gz"
-    dest: "/opt/etcd-{{ etcd_version }}"
-    remote_src: true
-    extra_opts: ["--strip-components=1"]
+- name: Download and unpack the etcd release (curl, with retries)
+  ansible.builtin.shell: >-
+    curl -fsSL --retry 5 --retry-delay 5 --max-time 300
+    -o /opt/etcd-{{ etcd_version }}/etcd.tar.gz
+    https://github.com/etcd-io/etcd/releases/download/v{{ etcd_version }}/etcd-v{{ etcd_version }}-linux-amd64.tar.gz
+    && tar -xzf /opt/etcd-{{ etcd_version }}/etcd.tar.gz
+    -C /opt/etcd-{{ etcd_version }} --strip-components=1
+  args:
     creates: "/opt/etcd-{{ etcd_version }}/etcdctl"
 
 - name: Link etcdctl and etcdutl into the PATH

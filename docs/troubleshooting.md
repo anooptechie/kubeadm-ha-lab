@@ -75,3 +75,10 @@ symptom, how it was diagnosed, cause, fix, and how to avoid it.
   (all 3 workers briefly NotReady while cp3 restarted its kubelet and etcd). A follow-up test
   that only restarted an API server did not reproduce it. The cause is not proven.
   See `docs/evidence/phase5-upgrade-findings.md`.
+
+## 13. etcd tools download timed out: "Failure downloading ... The read operation timed out"
+- **Symptom:** `backup.yml` failed on all three control planes in the `unarchive` task that downloads the etcd release from GitHub, twice in a row.
+- **Diagnosis:** `curl` from the same node fetched the same file (23 MB) in 0.2 s with HTTP 200, so the network and GitHub were fine.
+- **Cause:** not proven. The failure was in Ansible's built-in download path (it had worked on an earlier build).
+- **Fix:** download with `curl --retry` and unpack with `tar` (guarded with `creates`).
+- **Prevention:** for large downloads use a tool with retries and a long timeout, and test the download by hand before blaming the network.
