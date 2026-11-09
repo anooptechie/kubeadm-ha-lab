@@ -1,0 +1,40 @@
+## Clean rebuild from a fresh clone, 2026-11-09
+NAME      STATUS   ROLES           AGE   VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION           CONTAINER-RUNTIME
+cp1       Ready    control-plane   19m   v1.37.2   10.20.11.91    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp2       Ready    control-plane   17m   v1.37.2   10.20.12.180   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+cp3       Ready    control-plane   16m   v1.37.2   10.20.13.199   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker1   Ready    <none>          16m   v1.37.2   10.20.11.174   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker2   Ready    <none>          16m   v1.37.2   10.20.12.99    <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+worker3   Ready    <none>          16m   v1.37.2   10.20.13.179   <none>        Ubuntu 24.04.5 LTS   7.0.0-1014-aws (amd64)   containerd://2.4.2
+NAME        AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
+apiserver   True        False         False      18m     All objects available
+calico      True        False         False      15m     All objects available
+goldmane    True        False         False      18m     All objects available
+ippools     True        False         False      18m     All objects available
+tiers       True        False         False      18m     All objects available
+whisker     True        False         False      18m     All objects available
+No resources found
+┌──────────────────┬─────────┬──────┬───────────────────────────┬───────────────────────────┬────────────┐
+│        ID        │ STATUS  │ NAME │        PEER ADDRS         │       CLIENT ADDRS        │ IS LEARNER │
+├──────────────────┼─────────┼──────┼───────────────────────────┼───────────────────────────┼────────────┤
+│ 21d50e0742a14059 │ started │  cp3 │ https://10.20.13.199:2380 │ https://10.20.13.199:2379 │      false │
+│ 3b63b6c0bf109c45 │ started │  cp1 │  https://10.20.11.91:2380 │  https://10.20.11.91:2379 │      false │
+│ e0292d697c242c87 │ started │  cp2 │ https://10.20.12.180:2380 │ https://10.20.12.180:2379 │      false │
+└──────────────────┴─────────┴──────┴───────────────────────────┴───────────────────────────┴────────────┘
+------------------------------------
+|       DescribeTargetHealth       |
++----------+-----------------------+
+|   State  |        Target         |
++----------+-----------------------+
+|  healthy |  i-006761a7a62a91ef1  |
+|  healthy |  i-07c7c1bc57502911c  |
+|  healthy |  i-0fc5528e150a076e4  |
++----------+-----------------------+
+NAME                       READY   STATUS    RESTARTS   AGE
+pod/web-5f44f5bb86-2nksn   1/1     Running   0          10m
+pod/web-5f44f5bb86-g2gpj   1/1     Running   0          10m
+pod/web-5f44f5bb86-lpwc6   1/1     Running   0          10m
+pod/web-5f44f5bb86-vg66c   1/1     Running   0          10m
+
+NAME                                 MIN AVAILABLE   MAX UNAVAILABLE   ALLOWED DISRUPTIONS   AGE
+poddisruptionbudget.policy/web-pdb   3               N/A               1                     10m

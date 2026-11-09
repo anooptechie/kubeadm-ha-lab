@@ -8,7 +8,7 @@ restore, and an in-place minor-version upgrade.
 Everything described here was run for real. Raw output, including the things that went
 wrong, is in [`docs/evidence/`](docs/evidence/) and [`docs/troubleshooting.md`](docs/troubleshooting.md).
 
-> Clean-rebuild test from this README (destroy everything, rebuild from the repo): **not yet run**.
+> Clean-rebuild test: on 2026-11-09 I destroyed everything with `scripts/teardown.sh`, cloned this repo into an empty folder and rebuilt by following only this README. `terraform apply` took about 3 minutes and `ansible-playbook site.yml` about 9 minutes. Result: 6 nodes Ready on 1.37.2, 3 etcd members, 3 healthy load balancer targets (`docs/evidence/phase6-clean-rebuild.txt`). Findings: no step failed; the times are estimates from AWS and file timestamps (Ansible is an upper bound).
 
 ## Architecture
 
@@ -45,7 +45,7 @@ Limits of these numbers: one run each, a small cluster, probes every 2 seconds.
 
 Prerequisites, on a machine inside a VPC that the lab can peer with (the "workstation"):
 - AWS credentials that can create the resources (I used an EC2 instance role)
-- Terraform >= 1.6, the AWS CLI, `jq`, and `kubectl` (1.37 or newer)
+- Terraform >= 1.6, the AWS CLI, `jq`, and `kubectl` (within one minor version of the cluster)
 - Ansible in a virtualenv, for example:
   `python3 -m venv tools/ansible-venv && source tools/ansible-venv/bin/activate && pip install ansible`
   (`tools/ansible-venv` is gitignored; activate it in every new terminal)
